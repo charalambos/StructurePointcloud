@@ -12,3 +12,12 @@ Refereces:
 
 More information about this work: www.poullis.org
 
+
+
+
+Technical details:
+
+- The project file is provided for Code::Blocks IDE. 
+- It requires the libraries Image Magick and fftw3.
+- A small sample file is provided in the bin folders.
+- 
