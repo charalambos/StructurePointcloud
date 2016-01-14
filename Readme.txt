@@ -5,6 +5,7 @@ Structures the unstructured LiDAR data captured using an airborne scanner, into 
 
 The size of the "tiles" or "geospatial bounding boxes" can be adjusted by changing the preprocessor flags: RES_x, RES_Y, RES_Z.
 
+The copyright for the included bilateral filtering code belongs to Sylvain Paris and Frédo Durand.
 
 References:
 1. IEEE PAMI 2013: A Framework for Automatic Modeling from Point Cloud Data
