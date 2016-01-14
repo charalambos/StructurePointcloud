@@ -96,8 +96,7 @@ class GeospatialBoundingBox : public BoundingBox	{
 		void cleanUp();
 
 		///Resample into the right-sized XYZ in order to minimize information loss
-		bool resample(double sampling_tolerance= EPSILON, double 
-step = 0.05);
+		bool resample(double sampling_tolerance= 1.0, double step = 0.05);
 
 		///Loads the information from disk
 		void load(int index, std::string *base_file_name=0x00);

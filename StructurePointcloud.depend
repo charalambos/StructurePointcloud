@@ -2708,9 +2708,8 @@
 
 1450366296 /usr/include/bits/libm-simd-decl-stubs.h
 
-1414597553 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Color.cpp
+1418044834 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Color.cpp
 	"Color.h"
-	"Monitoring.h"
 
 1428490125 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Color.h
 	<math.h>
@@ -2745,7 +2744,7 @@
 1424866231 /usr/include/opencv2/core/affine.hpp
 	<opencv2/core/core.hpp>
 
-1414583138 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.h
+1433506795 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.h
 	<ostream>
 	<float.h>
 	"Color.h"
@@ -2790,12 +2789,13 @@
 	"GeometryProcessing.h"
 	"Color.h"
 
-1418045340 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.cpp
+1450925887 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.cpp
 	"Image.h"
 	"Utilities.h"
 	"GeometryProcessing.h"
 	"ImageProcessing.h"
 	"BoundingBox.h"
+	"Monitoring.h"
 
 1414583352 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/ImageProcessing.h
 	"fftw3.h"
@@ -2883,17 +2883,17 @@
 	"Image.h"
 	"Color.h"
 
-1450825713 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/main.cpp
+1452655074 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/main.cpp
 	"Eigen/Eigen"
 	"BoundingBox.h"
 	"GeometryExporter.h"
 	"GeospatialBoundingBox.h"
 
-1450825347 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.h
+1452785467 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.h
 	<float.h>
 	<iostream>
 	<fstream>
-	"Eigen/Eigen"
+	<Eigen/Eigen>
 	"BoundingBox.h"
 	"ImageProcessing.h"
 	"GeometryProcessing.h"
@@ -3609,7 +3609,7 @@
 	<map>
 	<string>
 
-1450830428 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.cpp
+1452739974 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.cpp
 	"GeospatialBoundingBox.h"
 
 1138725882 source:/home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/fft_3D/support_3D.cpp
