@@ -10,19 +10,17 @@
 #include "Image.h"
 #include "Color.h"
 
-#include "Monitoring.h"
-
 ImageProcessing::ImageProcessing()	{
-    functions_used["ImageProcessing: ImageProcessing"] = 1;
+
 }
 
 
 ImageProcessing::~ImageProcessing()	{
-    functions_used["ImageProcessing: ~ImageProcessing"] = 1;
+
 }
 
 void ImageProcessing::holeFill(Image *input_image, int max_neighbourhood_size, int min_neighbourhood_size, bool dominant_neighbour)	{
-	functions_used["ImageProcessing: holeFill"] = 1;
+
 	Image *result = holeFill2(input_image, max_neighbourhood_size, min_neighbourhood_size, dominant_neighbour);
 	input_image->copy(result);
 	delete result;
@@ -30,7 +28,7 @@ void ImageProcessing::holeFill(Image *input_image, int max_neighbourhood_size, i
 }
 
 Image *ImageProcessing::holeFill2(Image *input_image, int max_neighbourhood_size, int min_neighbourhood_size, bool dominant_neighbour)	{
-    functions_used["ImageProcessing: holeFill2"] = 1;
+
 
 	Image *img = new Image(*input_image);
 	bool have_holes = true;
@@ -57,7 +55,7 @@ Image *ImageProcessing::holeFill2(Image *input_image, int max_neighbourhood_size
 						if (img->getPixel(j,i)==Color(0.0f))	continue;
 						///if its substituting by the most dominant neighbour then keep track of the votes
 						if (dominant_neighbour)	{
-							Vector3f neighbour_value = color2vector3<float>(img->getPixel(j,i));
+							Vector3f neighbour_value = color2vector3(img->getPixel(j,i));
 							///first check if the value is already there
 							bool already_there = false;
 							int pos = -1;
@@ -74,14 +72,14 @@ Image *ImageProcessing::holeFill2(Image *input_image, int max_neighbourhood_size
 							}
 							else	{
 								///otherwise add it to the neighbour values
-								neighbour_values.push_back(color2vector3<float>(img->getPixel(j,i)));
+								neighbour_values.push_back(color2vector3(img->getPixel(j,i)));
 								///add a single vote
 								neighbour_votes.push_back(1);
 							}
 
 						}
 						number_of_valid_neighbours++;
-						avg_value += color2vector3<float>(img->getPixel(j,i));
+						avg_value += color2vector3(img->getPixel(j,i));
 					}
 				}
 				///if there are more than 6 neighbours then fill in the value
@@ -119,7 +117,7 @@ Image *ImageProcessing::holeFill2(Image *input_image, int max_neighbourhood_size
 }
 
 Image *ImageProcessing::bilateralFilteringGrayscale(Image *grayscale_image, double sigma_s, double sampling_s, double sigma_r, double sampling_r)	{
-	functions_used["ImageProcessing: bilateralFilteringGrayscale"] = 1;
+
 	typedef Array_2D<double> image_type;
 
 	///Convert to grayscale
@@ -151,7 +149,7 @@ Image *ImageProcessing::bilateralFilteringGrayscale(Image *grayscale_image, doub
 
 
 void ImageProcessing::pointReduction(Image *non_hole_filled_map, Image *hole_filled_map, int radius)	{
-	functions_used["ImageProcessing: pointReduction"] = 1;
+
 	Image *markup_image = new Image(non_hole_filled_map->getWidth(), non_hole_filled_map->getHeight(), 0.0f, 0.0f, 0.0f, 1.0f);
 	///Go through all the valid points in the non-hole-filled image and mark a neighbourhood of radius around them.
 	for (int y=0;y<non_hole_filled_map->getHeight();y++)	{
@@ -183,7 +181,7 @@ void ImageProcessing::pointReduction(Image *non_hole_filled_map, Image *hole_fil
 }
 
 Image *ImageProcessing::convolve(Image *input_image, Image *kernel)	{
-    functions_used["ImageProcessing: convolve"] = 1;
+
 	///Check if the input image is valid
 	if (!input_image || !kernel)	return 0x00;
 
@@ -282,7 +280,7 @@ Image *ImageProcessing::convolve(Image *input_image, Image *kernel)	{
 }
 
 fftw_complex *ImageProcessing::dft(Image *input_image, int channel, bool padding, int width, int height)	{
-	functions_used["ImageProcessing: dft"] = 1;
+
 	///Check if the input image is valid
 	if (!input_image) return 0x00;
 
@@ -313,7 +311,6 @@ fftw_complex *ImageProcessing::dft(Image *input_image, int channel, bool padding
 
 
 fftw_complex *ImageProcessing::idft(fftw_complex *input_image, int width, int height, Image *existing_image)	{
-	functions_used["ImageProcessing: idft"] = 1;
 	//Check if the input image is valid
 	if (!input_image) return 0x00;
 	///Allocate memory for the structures used by FFTW.
@@ -332,7 +329,6 @@ fftw_complex *ImageProcessing::idft(fftw_complex *input_image, int width, int he
 }
 
 Image *ImageProcessing::copy(fftw_complex *data, int channel, int width, int height, Image *existing_image)	{
-    functions_used["ImageProcessing: copy"] = 1;
 
 	if (existing_image)	{
 		for (int k=0, y=0;y<height;y++)	{
@@ -372,8 +368,7 @@ Image *ImageProcessing::copy(fftw_complex *data, int channel, int width, int hei
 }
 
 fftw_complex *ImageProcessing::copy(Image *data, int channel, bool padding, int width, int height)	{
-    functions_used["ImageProcessing: copy2"] = 1;
-	///Allocate the memory
+    ///Allocate the memory
 	fftw_complex *new_data = 0x00;
 	if (padding)	{
 		new_data = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * width * height);
@@ -417,8 +412,7 @@ fftw_complex *ImageProcessing::copy(Image *data, int channel, bool padding, int 
 
 ///Recreate the image to sizex + kernel_half_sizex etc
 Image *ImageProcessing::padImage(Image *input_image, int width, int height)	{
-    functions_used["ImageProcessing: padImage"] = 1;
-	Image *padded_input_image = new Image(input_image->getWidth() + width, input_image->getHeight() + height);
+    Image *padded_input_image = new Image(input_image->getWidth() + width, input_image->getHeight() + height);
 	for (int y=0;y<padded_input_image->getHeight();y++)	{
 		for (int x=0;x<padded_input_image->getWidth();x++)	{
 			if (x < input_image->getWidth() && y < input_image->getHeight())	{
@@ -431,8 +425,7 @@ Image *ImageProcessing::padImage(Image *input_image, int width, int height)	{
 }
 
 Image *ImageProcessing::unpadImage(Image *input_image, int width, int height)	{
-    functions_used["ImageProcessing: unpadImage"] = 1;
-	Image *unpadded_output_image = new Image(input_image->getWidth() - width, input_image->getHeight() - height);
+    Image *unpadded_output_image = new Image(input_image->getWidth() - width, input_image->getHeight() - height);
 	for (int y=0;y<unpadded_output_image->getHeight();y++)	{
 		for (int x=0;x<unpadded_output_image->getWidth();x++)	{
 			unpadded_output_image->setPixel(x,y, input_image->getPixel(x+width,y+height));
@@ -440,4 +433,5 @@ Image *ImageProcessing::unpadImage(Image *input_image, int width, int height)	{
 	}
 	return unpadded_output_image;
 }
+
 #endif

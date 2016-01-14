@@ -17,8 +17,8 @@
 
 #include "Edge.h"
 #include "Face.h"
-#include "Vector.h"
-
+#include "Eigen/Eigen"
+using namespace Eigen;
 
 class GeometricObject {
 	public:

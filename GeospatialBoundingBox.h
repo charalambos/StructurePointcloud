@@ -11,7 +11,9 @@
 #include <iostream>
 #include <fstream>
 
-#include "Vector.h"
+#include <Eigen/Eigen>
+using namespace Eigen;
+
 #include "BoundingBox.h"
 #include "ImageProcessing.h"
 #include "GeometryProcessing.h"
@@ -22,7 +24,7 @@
 
 using namespace std;
 
-#define MAX_SIZE_X		2048
+#define MAX_SIZE_X	    2048
 #define MAX_SIZE_Y		2048
 
 #define MAX_CAPACITY	MAX_SIZE_X * MAX_SIZE_Y
@@ -94,7 +96,7 @@ class GeospatialBoundingBox : public BoundingBox	{
 		void cleanUp();
 
 		///Resample into the right-sized XYZ in order to minimize information loss
-		bool resample(double sampling_tolerance= EPSILON, double step = 0.05);
+		bool resample(double sampling_tolerance= 1.0, double step = 0.05);
 
 		///Loads the information from disk
 		void load(int index, std::string *base_file_name=0x00);

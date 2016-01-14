@@ -1,7 +1,6 @@
 # depslib dependency file v1.0
-1414597548 source:/home/charalambos/git/StructurePointcloud/BoundingBox.cpp
+1418044895 source:/home/charalambos/git/StructurePointcloud/BoundingBox.cpp
 	"BoundingBox.h"
-	"Monitoring.h"
 
 1413487310 /home/charalambos/git/StructurePointcloud/BoundingBox.h
 	<float.h>
@@ -13,9 +12,8 @@
 	<math.h>
 	<vector>
 
-1414597553 source:/home/charalambos/git/StructurePointcloud/Color.cpp
+1418044834 source:/home/charalambos/git/StructurePointcloud/Color.cpp
 	"Color.h"
-	"Monitoring.h"
 
 1414265399 /home/charalambos/git/StructurePointcloud/Color.h
 	<math.h>
@@ -38,10 +36,9 @@
 	<iostream>
 	<string>
 
-1416394693 source:/home/charalambos/git/StructurePointcloud/GeometricObject.cpp
+1418044932 source:/home/charalambos/git/StructurePointcloud/GeometricObject.cpp
 	"GeometricObject.h"
 	"GeometryProcessing.h"
-	"Monitoring.h"
 
 1416394715 /home/charalambos/git/StructurePointcloud/GeometricObject.h
 	<math.h>
@@ -65,7 +62,7 @@
 	"Utilities.h"
 	"GeometricObject.h"
 
-1397211326 /usr/include/opencv2/opencv.hpp
+1424866231 /usr/include/opencv2/opencv.hpp
 	"opencv2/core/core_c.h"
 	"opencv2/core/core.hpp"
 	"opencv2/flann/miniflann.hpp"
@@ -88,7 +85,7 @@
 	"Magick++.h"
 	"FileUtilities.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++.h
+1452272681 /usr/include/ImageMagick-6/Magick++.h
 	<Magick++/Include.h>
 	<Magick++/Functions.h>
 	<Magick++/Image.h>
@@ -96,7 +93,7 @@
 	<Magick++/ResourceLimits.h>
 	<Magick++/STL.h>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Include.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Include.h
 	"magick/magick-config.h"
 	"magick-config.h"
 	<stdio.h>
@@ -109,12 +106,12 @@
 	<magick/MagickCore.h>
 	<wand/MagickWand.h>
 
-1415099522 /usr/include/ImageMagick-6/magick/magick-config.h
+1452272681 /usr/include/ImageMagick-6/magick/magick-config.h
 	"magick/magick-baseconfig.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/magick-baseconfig.h
+1452272681 /usr/include/ImageMagick-6/magick/magick-baseconfig.h
 
-1415099522 /usr/include/ImageMagick-6/magick/MagickCore.h
+1452272681 /usr/include/ImageMagick-6/magick/MagickCore.h
 	"magick/magick-config.h"
 	"magick-config.h"
 	<stdio.h>
@@ -208,40 +205,41 @@
 	"magick/type.h"
 	"magick/utility.h"
 	"magick/version.h"
+	"magick/vision.h"
 	"magick/xml-tree.h"
 	"magick/xwindow.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/method-attribute.h
+1452272681 /usr/include/ImageMagick-6/magick/method-attribute.h
 
-1415099522 /usr/include/ImageMagick-6/magick/methods.h
+1452272681 /usr/include/ImageMagick-6/magick/methods.h
 
-1415099522 /usr/include/ImageMagick-6/magick/magick-type.h
+1452272681 /usr/include/ImageMagick-6/magick/magick-type.h
 	"magick/magick-config.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/accelerate.h
+1452272681 /usr/include/ImageMagick-6/magick/accelerate.h
 	"magick/fx.h"
 	"magick/morphology.h"
 	"magick/resample.h"
 	"magick/resize.h"
 	"magick/statistic.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/morphology.h
+1452272681 /usr/include/ImageMagick-6/magick/morphology.h
 	"magick/geometry.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/geometry.h
+1452272681 /usr/include/ImageMagick-6/magick/geometry.h
 
-1415099522 /usr/include/ImageMagick-6/magick/animate.h
+1452272681 /usr/include/ImageMagick-6/magick/animate.h
 
-1415099522 /usr/include/ImageMagick-6/magick/annotate.h
+1452272681 /usr/include/ImageMagick-6/magick/annotate.h
 	"magick/draw.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/draw.h
+1452272681 /usr/include/ImageMagick-6/magick/draw.h
 	"magick/geometry.h"
 	"magick/image.h"
 	"magick/pixel.h"
 	"magick/type.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/image.h
+1452272681 /usr/include/ImageMagick-6/magick/image.h
 	"magick/color.h"
 	"magick/blob.h"
 	"magick/colorspace.h"
@@ -263,103 +261,103 @@
 	"magick/stream.h"
 	"magick/timer.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/color.h
+1452272681 /usr/include/ImageMagick-6/magick/color.h
 	"magick/pixel.h"
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/pixel.h
+1452272681 /usr/include/ImageMagick-6/magick/pixel.h
 	"magick/colorspace.h"
 	"magick/constitute.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/colorspace.h
+1452272681 /usr/include/ImageMagick-6/magick/colorspace.h
 
-1415099522 /usr/include/ImageMagick-6/magick/constitute.h
+1452272681 /usr/include/ImageMagick-6/magick/constitute.h
 
-1415099522 /usr/include/ImageMagick-6/magick/exception.h
+1452272681 /usr/include/ImageMagick-6/magick/exception.h
 	<stdarg.h>
 	"magick/semaphore.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/semaphore.h
+1452272681 /usr/include/ImageMagick-6/magick/semaphore.h
 
-1415099522 /usr/include/ImageMagick-6/magick/blob.h
+1452272681 /usr/include/ImageMagick-6/magick/blob.h
 	"magick/image.h"
 	"magick/stream.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/stream.h
+1452272681 /usr/include/ImageMagick-6/magick/stream.h
 
-1415099522 /usr/include/ImageMagick-6/magick/cache-view.h
+1452272681 /usr/include/ImageMagick-6/magick/cache-view.h
 	"magick/pixel.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/composite.h
+1452272681 /usr/include/ImageMagick-6/magick/composite.h
 
-1415099522 /usr/include/ImageMagick-6/magick/compress.h
+1452272681 /usr/include/ImageMagick-6/magick/compress.h
 
-1415099522 /usr/include/ImageMagick-6/magick/effect.h
+1452272681 /usr/include/ImageMagick-6/magick/effect.h
 	"magick/morphology.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/layer.h
+1452272681 /usr/include/ImageMagick-6/magick/layer.h
 
-1415099522 /usr/include/ImageMagick-6/magick/locale_.h
+1452272681 /usr/include/ImageMagick-6/magick/locale_.h
 	"magick/hashmap.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/hashmap.h
+1452272681 /usr/include/ImageMagick-6/magick/hashmap.h
 
-1415099522 /usr/include/ImageMagick-6/magick/monitor.h
+1452272681 /usr/include/ImageMagick-6/magick/monitor.h
 
-1415099522 /usr/include/ImageMagick-6/magick/profile.h
+1452272681 /usr/include/ImageMagick-6/magick/profile.h
 	"magick/string_.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/string_.h
+1452272681 /usr/include/ImageMagick-6/magick/string_.h
 	<stdarg.h>
 	<time.h>
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/quantum.h
+1452272681 /usr/include/ImageMagick-6/magick/quantum.h
 	"magick/image.h"
 	"magick/semaphore.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/resample.h
+1452272681 /usr/include/ImageMagick-6/magick/resample.h
 	"magick/cache-view.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/resize.h
+1452272681 /usr/include/ImageMagick-6/magick/resize.h
 
-1415099522 /usr/include/ImageMagick-6/magick/timer.h
+1452272681 /usr/include/ImageMagick-6/magick/timer.h
 
-1415099522 /usr/include/ImageMagick-6/magick/type.h
+1452272681 /usr/include/ImageMagick-6/magick/type.h
 
-1415099522 /usr/include/ImageMagick-6/magick/artifact.h
+1452272681 /usr/include/ImageMagick-6/magick/artifact.h
 
-1415099522 /usr/include/ImageMagick-6/magick/attribute.h
+1452272681 /usr/include/ImageMagick-6/magick/attribute.h
 	"magick/image.h"
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/cache.h
+1452272681 /usr/include/ImageMagick-6/magick/cache.h
 	"magick/blob.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/channel.h
+1452272681 /usr/include/ImageMagick-6/magick/channel.h
 	"magick/image.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/cipher.h
+1452272681 /usr/include/ImageMagick-6/magick/cipher.h
 
-1415099522 /usr/include/ImageMagick-6/magick/client.h
+1452272681 /usr/include/ImageMagick-6/magick/client.h
 
-1415099522 /usr/include/ImageMagick-6/magick/coder.h
+1452272681 /usr/include/ImageMagick-6/magick/coder.h
 
-1415099522 /usr/include/ImageMagick-6/magick/colormap.h
+1452272681 /usr/include/ImageMagick-6/magick/colormap.h
 
-1415099522 /usr/include/ImageMagick-6/magick/compare.h
+1452272681 /usr/include/ImageMagick-6/magick/compare.h
 	"magick/image.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/configure.h
+1452272681 /usr/include/ImageMagick-6/magick/configure.h
 	"magick/hashmap.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/decorate.h
+1452272681 /usr/include/ImageMagick-6/magick/decorate.h
 
-1415099522 /usr/include/ImageMagick-6/magick/delegate.h
+1452272681 /usr/include/ImageMagick-6/magick/delegate.h
 	<stdarg.h>
 	"magick/semaphore.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/deprecate.h
+1452272681 /usr/include/ImageMagick-6/magick/deprecate.h
 	<stdarg.h>
 	"magick/blob.h"
 	"magick/cache-view.h"
@@ -372,114 +370,114 @@
 	"magick/registry.h"
 	"magick/semaphore.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/quantize.h
+1452272681 /usr/include/ImageMagick-6/magick/quantize.h
 	"magick/colorspace.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/registry.h
+1452272681 /usr/include/ImageMagick-6/magick/registry.h
 
-1415099522 /usr/include/ImageMagick-6/magick/display.h
+1452272681 /usr/include/ImageMagick-6/magick/display.h
 
-1415099522 /usr/include/ImageMagick-6/magick/distort.h
+1452272681 /usr/include/ImageMagick-6/magick/distort.h
 
-1415099522 /usr/include/ImageMagick-6/magick/distribute-cache.h
+1452272681 /usr/include/ImageMagick-6/magick/distribute-cache.h
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/enhance.h
+1452272681 /usr/include/ImageMagick-6/magick/enhance.h
 	"magick/pixel.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/feature.h
+1452272681 /usr/include/ImageMagick-6/magick/feature.h
 
-1415099522 /usr/include/ImageMagick-6/magick/fourier.h
+1452272681 /usr/include/ImageMagick-6/magick/fourier.h
 
-1415099522 /usr/include/ImageMagick-6/magick/fx.h
+1452272681 /usr/include/ImageMagick-6/magick/fx.h
 	"magick/draw.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/gem.h
+1452272681 /usr/include/ImageMagick-6/magick/gem.h
 	"magick/fx.h"
 	"magick/random_.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/random_.h
+1452272681 /usr/include/ImageMagick-6/magick/random_.h
 	"magick/string_.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/histogram.h
+1452272681 /usr/include/ImageMagick-6/magick/histogram.h
 
-1415099522 /usr/include/ImageMagick-6/magick/identify.h
+1452272681 /usr/include/ImageMagick-6/magick/identify.h
 
-1415099522 /usr/include/ImageMagick-6/magick/image-view.h
+1452272681 /usr/include/ImageMagick-6/magick/image-view.h
 
-1415099522 /usr/include/ImageMagick-6/magick/list.h
+1452272681 /usr/include/ImageMagick-6/magick/list.h
 
-1415099522 /usr/include/ImageMagick-6/magick/log.h
+1452272681 /usr/include/ImageMagick-6/magick/log.h
 	<stdarg.h>
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/magic.h
+1452272681 /usr/include/ImageMagick-6/magick/magic.h
 
-1415099522 /usr/include/ImageMagick-6/magick/magick.h
+1452272681 /usr/include/ImageMagick-6/magick/magick.h
 	<stdarg.h>
 	"magick/semaphore.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/matrix.h
+1452272681 /usr/include/ImageMagick-6/magick/matrix.h
 
-1415099522 /usr/include/ImageMagick-6/magick/memory_.h
+1452272681 /usr/include/ImageMagick-6/magick/memory_.h
 
-1415099522 /usr/include/ImageMagick-6/magick/module.h
+1452272681 /usr/include/ImageMagick-6/magick/module.h
 	<time.h>
 	"magick/version.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/version.h
+1452272681 /usr/include/ImageMagick-6/magick/version.h
 
-1415099522 /usr/include/ImageMagick-6/magick/mime.h
+1452272681 /usr/include/ImageMagick-6/magick/mime.h
 
-1415099522 /usr/include/ImageMagick-6/magick/montage.h
+1452272681 /usr/include/ImageMagick-6/magick/montage.h
 
-1415099522 /usr/include/ImageMagick-6/magick/option.h
+1452272681 /usr/include/ImageMagick-6/magick/option.h
 
-1415099522 /usr/include/ImageMagick-6/magick/paint.h
+1452272681 /usr/include/ImageMagick-6/magick/paint.h
 	"magick/color.h"
 	"magick/draw.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/pixel-accessor.h
+1452272681 /usr/include/ImageMagick-6/magick/pixel-accessor.h
 	<math.h>
 	"magick/gem.h"
 	"magick/pixel.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/policy.h
+1452272681 /usr/include/ImageMagick-6/magick/policy.h
 	"magick/pixel.h"
 	"magick/exception.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/prepress.h
+1452272681 /usr/include/ImageMagick-6/magick/prepress.h
 
-1415099522 /usr/include/ImageMagick-6/magick/property.h
+1452272681 /usr/include/ImageMagick-6/magick/property.h
 
-1415099522 /usr/include/ImageMagick-6/magick/resource_.h
+1452272681 /usr/include/ImageMagick-6/magick/resource_.h
 
-1415099522 /usr/include/ImageMagick-6/magick/segment.h
+1452272681 /usr/include/ImageMagick-6/magick/segment.h
 
-1415099522 /usr/include/ImageMagick-6/magick/shear.h
+1452272681 /usr/include/ImageMagick-6/magick/shear.h
 
-1415099522 /usr/include/ImageMagick-6/magick/signature.h
+1452272681 /usr/include/ImageMagick-6/magick/signature.h
 
-1415099522 /usr/include/ImageMagick-6/magick/splay-tree.h
+1452272681 /usr/include/ImageMagick-6/magick/splay-tree.h
 
-1415099522 /usr/include/ImageMagick-6/magick/statistic.h
+1452272681 /usr/include/ImageMagick-6/magick/statistic.h
 	"magick/draw.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/token.h
+1452272681 /usr/include/ImageMagick-6/magick/token.h
 
-1415099522 /usr/include/ImageMagick-6/magick/transform.h
+1452272681 /usr/include/ImageMagick-6/magick/transform.h
 
-1415099522 /usr/include/ImageMagick-6/magick/threshold.h
+1452272681 /usr/include/ImageMagick-6/magick/threshold.h
 
-1415099522 /usr/include/ImageMagick-6/magick/utility.h
+1452272681 /usr/include/ImageMagick-6/magick/utility.h
 
-1415099522 /usr/include/ImageMagick-6/magick/xml-tree.h
+1452272681 /usr/include/ImageMagick-6/magick/xml-tree.h
 	"magick/exception.h"
 	"magick/splay-tree.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/xwindow.h
+1452272681 /usr/include/ImageMagick-6/magick/xwindow.h
 
-1415099523 /usr/include/ImageMagick-6/wand/MagickWand.h
+1452272681 /usr/include/ImageMagick-6/wand/MagickWand.h
 	"magick/magick-config.h"
 	"magick-config.h"
 	<stdio.h>
@@ -509,55 +507,55 @@
 	"wand/stream.h"
 	"wand/wand-view.h"
 
-1415099523 /usr/include/ImageMagick-6/wand/method-attribute.h
+1452272681 /usr/include/ImageMagick-6/wand/method-attribute.h
 
-1415099523 /usr/include/ImageMagick-6/wand/animate.h
+1452272681 /usr/include/ImageMagick-6/wand/animate.h
 
-1415099523 /usr/include/ImageMagick-6/wand/compare.h
+1452272681 /usr/include/ImageMagick-6/wand/compare.h
 
-1415099523 /usr/include/ImageMagick-6/wand/composite.h
+1452272681 /usr/include/ImageMagick-6/wand/composite.h
 
-1415099523 /usr/include/ImageMagick-6/wand/conjure.h
+1452272681 /usr/include/ImageMagick-6/wand/conjure.h
 
-1415099523 /usr/include/ImageMagick-6/wand/convert.h
+1452272681 /usr/include/ImageMagick-6/wand/convert.h
 
-1415099523 /usr/include/ImageMagick-6/wand/deprecate.h
+1452272681 /usr/include/ImageMagick-6/wand/deprecate.h
 	"wand/drawing-wand.h"
 	"wand/magick-wand.h"
 	"wand/pixel-iterator.h"
 	"wand/pixel-wand.h"
 
-1415099523 /usr/include/ImageMagick-6/wand/drawing-wand.h
+1452272681 /usr/include/ImageMagick-6/wand/drawing-wand.h
 	"wand/pixel-wand.h"
 
-1415099523 /usr/include/ImageMagick-6/wand/pixel-wand.h
+1452272681 /usr/include/ImageMagick-6/wand/pixel-wand.h
 
-1415099523 /usr/include/ImageMagick-6/wand/magick-wand.h
+1452272681 /usr/include/ImageMagick-6/wand/magick-wand.h
 	"wand/MagickWand.h"
 
-1415099523 /usr/include/ImageMagick-6/wand/pixel-iterator.h
+1452272681 /usr/include/ImageMagick-6/wand/pixel-iterator.h
 	"wand/magick-wand.h"
 	"wand/pixel-wand.h"
 
-1415099523 /usr/include/ImageMagick-6/wand/display.h
+1452272681 /usr/include/ImageMagick-6/wand/display.h
 
-1415099523 /usr/include/ImageMagick-6/wand/identify.h
+1452272681 /usr/include/ImageMagick-6/wand/identify.h
 
-1415099523 /usr/include/ImageMagick-6/wand/import.h
+1452272681 /usr/include/ImageMagick-6/wand/import.h
 
-1415099523 /usr/include/ImageMagick-6/wand/magick-property.h
+1452272681 /usr/include/ImageMagick-6/wand/magick-property.h
 
-1415099523 /usr/include/ImageMagick-6/wand/magick-image.h
+1452272681 /usr/include/ImageMagick-6/wand/magick-image.h
 
-1415099523 /usr/include/ImageMagick-6/wand/mogrify.h
+1452272681 /usr/include/ImageMagick-6/wand/mogrify.h
 
-1415099523 /usr/include/ImageMagick-6/wand/montage.h
+1452272681 /usr/include/ImageMagick-6/wand/montage.h
 
-1415099523 /usr/include/ImageMagick-6/wand/stream.h
+1452272681 /usr/include/ImageMagick-6/wand/stream.h
 
-1415099523 /usr/include/ImageMagick-6/wand/wand-view.h
+1452272681 /usr/include/ImageMagick-6/wand/wand-view.h
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Image.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Image.h
 	"Magick++/Include.h"
 	<string>
 	<list>
@@ -569,15 +567,15 @@
 	"Magick++/Geometry.h"
 	"Magick++/TypeMetric.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Blob.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Blob.h
 	"Magick++/Include.h"
 	<string>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Color.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Color.h
 	"Magick++/Include.h"
 	<string>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Drawable.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Drawable.h
 	"Magick++/Include.h"
 	<functional>
 	<string>
@@ -586,24 +584,24 @@
 	"Magick++/Color.h"
 	"Magick++/Geometry.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Geometry.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Geometry.h
 	"Magick++/Include.h"
 	<string>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Exception.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Exception.h
 	"Magick++/Include.h"
 	<string>
 	<exception>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/TypeMetric.h
+1452272681 /usr/include/ImageMagick-6/Magick++/TypeMetric.h
 	"Magick++/Include.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Pixels.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Pixels.h
 	"Magick++/Include.h"
 	"Magick++/Color.h"
 	"Magick++/Image.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++/STL.h
+1452272681 /usr/include/ImageMagick-6/Magick++/STL.h
 	"Magick++/Include.h"
 	<algorithm>
 	<functional>
@@ -615,11 +613,11 @@
 	"Magick++/Exception.h"
 	"Magick++/Montage.h"
 
-1415099522 /usr/include/ImageMagick-6/Magick++/CoderInfo.h
+1452272681 /usr/include/ImageMagick-6/Magick++/CoderInfo.h
 	"Magick++/Include.h"
 	<string>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Montage.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Montage.h
 	"Magick++/Include.h"
 	<string>
 	"Magick++/Color.h"
@@ -648,15 +646,13 @@
 	<sys/timeb.h>
 	<math.h>
 
-1417010047 source:/home/charalambos/git/StructurePointcloud/GeometryProcessing.cpp
+1418044954 source:/home/charalambos/git/StructurePointcloud/GeometryProcessing.cpp
 	"GeometryProcessing.h"
-	"Monitoring.h"
 
-1417006357 source:/home/charalambos/git/StructurePointcloud/GeospatialBoundingBox.cpp
+1432896651 source:/home/charalambos/git/StructurePointcloud/GeospatialBoundingBox.cpp
 	"GeospatialBoundingBox.h"
-	"Monitoring.h"
 
-1415714153 /home/charalambos/git/StructurePointcloud/GeospatialBoundingBox.h
+1432898117 /home/charalambos/git/StructurePointcloud/GeospatialBoundingBox.h
 	<float.h>
 	<iostream>
 	<fstream>
@@ -755,68 +751,65 @@
 	"Vector.h"
 	<vector>
 
-1414597575 source:/home/charalambos/git/StructurePointcloud/Image.cpp
+1418045340 source:/home/charalambos/git/StructurePointcloud/Image.cpp
 	"Image.h"
 	"Utilities.h"
 	"GeometryProcessing.h"
 	"ImageProcessing.h"
 	"BoundingBox.h"
-	"Monitoring.h"
 
-1414597580 source:/home/charalambos/git/StructurePointcloud/ImageProcessing.cpp
+1418045435 source:/home/charalambos/git/StructurePointcloud/ImageProcessing.cpp
 	"ImageProcessing.h"
 	"Image.h"
 	"Color.h"
-	"Monitoring.h"
 
-1417004136 source:/home/charalambos/git/StructurePointcloud/main.cpp
+1432882216 source:/home/charalambos/git/StructurePointcloud/main.cpp
 	"Vector.h"
 	"BoundingBox.h"
 	"GeometryExporter.h"
 	"GeospatialBoundingBox.h"
-	"Monitoring.h"
 
-1412605368 /usr/include/errno.h
+1450366299 /usr/include/errno.h
 	<features.h>
 	<bits/errno.h>
 
-1412605357 /usr/include/features.h
+1450366277 /usr/include/features.h
 	<stdc-predef.h>
 	<sys/cdefs.h>
 	<gnu/stubs.h>
 
-1412605357 /usr/include/stdc-predef.h
+1450366277 /usr/include/stdc-predef.h
 
-1412605375 /usr/include/sys/cdefs.h
+1450366309 /usr/include/sys/cdefs.h
 	<features.h>
 	<bits/wordsize.h>
 
-1412605368 /usr/include/bits/wordsize.h
+1450366299 /usr/include/bits/wordsize.h
 
-1412605358 /usr/include/gnu/stubs.h
+1450366277 /usr/include/gnu/stubs.h
 	<gnu/stubs-32.h>
 	<gnu/stubs-64.h>
 	<gnu/stubs-x32.h>
 
 1409667351 /usr/include/gnu/stubs-32.h
 
-1412605393 /usr/include/gnu/stubs-64.h
+1450366379 /usr/include/gnu/stubs-64.h
 
-1412605368 /usr/include/bits/errno.h
+1450366299 /usr/include/bits/errno.h
 	<linux/errno.h>
 
-1407699697 /usr/include/linux/errno.h
+1444661690 /usr/include/linux/errno.h
 	<asm/errno.h>
 
-1407699635 /usr/include/asm/errno.h
+1444661632 /usr/include/asm/errno.h
 	<asm-generic/errno.h>
 
-1407699628 /usr/include/asm-generic/errno.h
+1444661626 /usr/include/asm-generic/errno.h
 	<asm-generic/errno-base.h>
 
-1407699628 /usr/include/asm-generic/errno-base.h
+1444661626 /usr/include/asm-generic/errno-base.h
 
-1412605370 /usr/include/stdio.h
+1450366301 /usr/include/stdio.h
 	<features.h>
 	<stddef.h>
 	<bits/types.h>
@@ -829,14 +822,14 @@
 	<bits/stdio2.h>
 	<bits/stdio-ldbl.h>
 
-1412605374 /usr/include/bits/types.h
+1450366307 /usr/include/bits/types.h
 	<features.h>
 	<bits/wordsize.h>
 	<bits/typesizes.h>
 
-1412605374 /usr/include/bits/typesizes.h
+1450366307 /usr/include/bits/typesizes.h
 
-1412605370 /usr/include/libio.h
+1450366301 /usr/include/libio.h
 	<_G_config.h>
 	<stdarg.h>
 	<sys/cdefs.h>
@@ -844,13 +837,13 @@
 	<shlib-compat.h>
 	<bits/libio-ldbl.h>
 
-1412605370 /usr/include/_G_config.h
+1450366301 /usr/include/_G_config.h
 	<bits/types.h>
 	<stddef.h>
 	<wchar.h>
 	<gconv.h>
 
-1412605372 /usr/include/wchar.h
+1450366304 /usr/include/wchar.h
 	<features.h>
 	<stdio.h>
 	<stdarg.h>
@@ -864,50 +857,50 @@
 	<bits/wchar2.h>
 	<bits/wchar-ldbl.h>
 
-1412605372 /usr/include/bits/wchar.h
+1450366304 /usr/include/bits/wchar.h
 
-1412605377 /usr/include/wctype.h
+1450366312 /usr/include/wctype.h
 	<features.h>
 	<bits/types.h>
 	<wchar.h>
 	<endian.h>
 	<xlocale.h>
 
-1412605371 /usr/include/endian.h
+1450366303 /usr/include/endian.h
 	<features.h>
 	<bits/endian.h>
 	<bits/byteswap.h>
 
-1412605371 /usr/include/bits/endian.h
+1450366303 /usr/include/bits/endian.h
 
-1412605371 /usr/include/bits/byteswap.h
+1450366303 /usr/include/bits/byteswap.h
 	<features.h>
 	<bits/types.h>
 	<bits/wordsize.h>
 	<bits/byteswap-16.h>
 
-1412605371 /usr/include/bits/byteswap-16.h
+1450366303 /usr/include/bits/byteswap-16.h
 
-1412605358 /usr/include/xlocale.h
+1450366279 /usr/include/xlocale.h
 
-1412605372 /usr/include/bits/wchar2.h
+1450366304 /usr/include/bits/wchar2.h
 
-1412605372 /usr/include/bits/wchar-ldbl.h
+1450366304 /usr/include/bits/wchar-ldbl.h
 
-1412605358 /usr/include/gconv.h
+1450366278 /usr/include/gconv.h
 	<features.h>
 	<wchar.h>
 	<stddef.h>
 
-1391763878 /usr/include/bits/stdio-lock.h
+1438756941 /usr/include/bits/stdio-lock.h
 	<bits/libc-lock.h>
 
-1412605357 /usr/include/bits/libc-lock.h
+1450366277 /usr/include/bits/libc-lock.h
 	<pthread.h>
 	<stddef.h>
 	"libc-lockP.h"
 
-1412605382 /usr/include/pthread.h
+1450366359 /usr/include/pthread.h
 	<features.h>
 	<endian.h>
 	<sched.h>
@@ -916,14 +909,14 @@
 	<bits/setjmp.h>
 	<bits/wordsize.h>
 
-1412605374 /usr/include/sched.h
+1450366307 /usr/include/sched.h
 	<features.h>
 	<bits/types.h>
 	<stddef.h>
 	<time.h>
 	<bits/sched.h>
 
-1412605372 /usr/include/time.h
+1450366305 /usr/include/time.h
 	<features.h>
 	<stddef.h>
 	<bits/time.h>
@@ -934,44 +927,44 @@
 	<bits/types.h>
 	<xlocale.h>
 
-1412605372 /usr/include/bits/time.h
+1450366305 /usr/include/bits/time.h
 	<bits/types.h>
 	<bits/types.h>
 	<bits/timex.h>
 
-1412605372 /usr/include/bits/timex.h
+1450366305 /usr/include/bits/timex.h
 	<bits/types.h>
 
-1412605374 /usr/include/bits/sched.h
+1450366307 /usr/include/bits/sched.h
 
-1412605374 /usr/include/bits/pthreadtypes.h
+1450366307 /usr/include/bits/pthreadtypes.h
 	<bits/wordsize.h>
 
-1412605367 /usr/include/bits/setjmp.h
+1450366298 /usr/include/bits/setjmp.h
 	<bits/wordsize.h>
 
-1412605370 /usr/include/bits/libio-ldbl.h
+1450366301 /usr/include/bits/libio-ldbl.h
 
-1412605369 /usr/include/bits/stdio_lim.h
+1450366300 /usr/include/bits/stdio_lim.h
 
-1412605370 /usr/include/bits/sys_errlist.h
+1450366301 /usr/include/bits/sys_errlist.h
 
-1412605373 /usr/include/getopt.h
+1450366307 /usr/include/getopt.h
 	<ctype.h>
 
-1412605364 /usr/include/ctype.h
+1450366291 /usr/include/ctype.h
 	<features.h>
 	<bits/types.h>
 	<endian.h>
 	<xlocale.h>
 
-1412605370 /usr/include/bits/stdio.h
+1450366301 /usr/include/bits/stdio.h
 
-1412605370 /usr/include/bits/stdio2.h
+1450366301 /usr/include/bits/stdio2.h
 
-1412605370 /usr/include/bits/stdio-ldbl.h
+1450366301 /usr/include/bits/stdio-ldbl.h
 
-1412605368 /usr/include/stdlib.h
+1450366299 /usr/include/stdlib.h
 	<features.h>
 	<stddef.h>
 	<bits/waitflags.h>
@@ -984,12 +977,12 @@
 	<bits/stdlib.h>
 	<bits/stdlib-ldbl.h>
 
-1412605374 /usr/include/bits/waitflags.h
+1450366307 /usr/include/bits/waitflags.h
 
-1412605374 /usr/include/bits/waitstatus.h
+1450366307 /usr/include/bits/waitstatus.h
 	<endian.h>
 
-1412605373 /usr/include/sys/types.h
+1450366307 /usr/include/sys/types.h
 	<features.h>
 	<bits/types.h>
 	<time.h>
@@ -999,7 +992,7 @@
 	<sys/sysmacros.h>
 	<bits/pthreadtypes.h>
 
-1412605375 /usr/include/sys/select.h
+1450366309 /usr/include/sys/select.h
 	<features.h>
 	<bits/types.h>
 	<bits/select.h>
@@ -1008,29 +1001,29 @@
 	<bits/time.h>
 	<bits/select2.h>
 
-1412605375 /usr/include/bits/select.h
+1450366309 /usr/include/bits/select.h
 	<bits/wordsize.h>
 
-1412605368 /usr/include/bits/sigset.h
+1450366298 /usr/include/bits/sigset.h
 
-1412605375 /usr/include/bits/select2.h
+1450366310 /usr/include/bits/select2.h
 
-1412605374 /usr/include/sys/sysmacros.h
+1450366307 /usr/include/sys/sysmacros.h
 	<features.h>
 
-1412605368 /usr/include/alloca.h
+1450366299 /usr/include/alloca.h
 	<features.h>
 	<stddef.h>
 
-1412605368 /usr/include/bits/stdlib-bsearch.h
+1450366299 /usr/include/bits/stdlib-bsearch.h
 
-1412605368 /usr/include/bits/stdlib-float.h
+1450366299 /usr/include/bits/stdlib-float.h
 
-1412605368 /usr/include/bits/stdlib.h
+1450366299 /usr/include/bits/stdlib.h
 
-1412605368 /usr/include/bits/stdlib-ldbl.h
+1450366299 /usr/include/bits/stdlib-ldbl.h
 
-1412605371 /usr/include/string.h
+1450366303 /usr/include/string.h
 	<features.h>
 	<stddef.h>
 	<xlocale.h>
@@ -1038,20 +1031,20 @@
 	<bits/string2.h>
 	<bits/string3.h>
 
-1412605371 /usr/include/bits/string.h
+1450366303 /usr/include/bits/string.h
 
-1412605371 /usr/include/bits/string2.h
+1450366303 /usr/include/bits/string2.h
 	<endian.h>
 	<bits/types.h>
 	<stdlib.h>
 
-1412605371 /usr/include/bits/string3.h
+1450366303 /usr/include/bits/string3.h
 
-1412612123 /usr/include/fftw3.h
+1434630470 /usr/include/fftw3.h
 	<stdio.h>
 	<stddef.h>
 
-1411658032 /usr/include/boost/array.hpp
+1450371384 /usr/include/boost/array.hpp
 	<boost/detail/workaround.hpp>
 	<cstddef>
 	<stdexcept>
@@ -1063,32 +1056,82 @@
 	<algorithm>
 	<boost/config.hpp>
 
-1411658039 /usr/include/boost/detail/workaround.hpp
+1450371390 /usr/include/boost/detail/workaround.hpp
 	<boost/config.hpp>
 
-1411658033 /usr/include/boost/config.hpp
+1450371384 /usr/include/boost/config.hpp
+	<boost/config/user.hpp>
 	<boost/config/select_compiler_config.hpp>
 	<boost/config/select_stdlib_config.hpp>
 	<boost/config/select_platform_config.hpp>
 	<boost/config/suffix.hpp>
 
-1411658034 /usr/include/boost/config/select_compiler_config.hpp
+1450371393 /usr/include/boost/config/select_compiler_config.hpp
+	"boost/config/compiler/nvcc.hpp"
+	"boost/config/compiler/gcc_xml.hpp"
+	"boost/config/compiler/cray.hpp"
+	"boost/config/compiler/comeau.hpp"
+	"boost/config/compiler/pathscale.hpp"
+	"boost/config/compiler/intel.hpp"
+	"boost/config/compiler/clang.hpp"
+	"boost/config/compiler/digitalmars.hpp"
+	"boost/config/compiler/gcc.hpp"
+	"boost/config/compiler/kai.hpp"
+	"boost/config/compiler/sgi_mipspro.hpp"
+	"boost/config/compiler/compaq_cxx.hpp"
+	"boost/config/compiler/greenhills.hpp"
+	"boost/config/compiler/codegear.hpp"
+	"boost/config/compiler/borland.hpp"
+	"boost/config/compiler/metrowerks.hpp"
+	"boost/config/compiler/sunpro_cc.hpp"
+	"boost/config/compiler/hp_acc.hpp"
+	"boost/config/compiler/mpw.hpp"
+	"boost/config/compiler/vacpp.hpp"
+	"boost/config/compiler/pgi.hpp"
+	"boost/config/compiler/visualc.hpp"
 
-1411658034 /usr/include/boost/config/select_stdlib_config.hpp
+1450371393 /usr/include/boost/config/select_stdlib_config.hpp
 	<cstddef>
 	<stddef.h>
-	<boost/config/no_tr1/utility.hpp>
+	<utility>
+	"boost/config/stdlib/stlport.hpp"
+	"boost/config/stdlib/libcomo.hpp"
+	"boost/config/stdlib/roguewave.hpp"
+	"boost/config/stdlib/libcpp.hpp"
+	"boost/config/stdlib/libstdcpp3.hpp"
+	"boost/config/stdlib/sgi.hpp"
+	"boost/config/stdlib/msl.hpp"
+	"boost/config/stdlib/vacpp.hpp"
+	"boost/config/stdlib/modena.hpp"
+	"boost/config/stdlib/dinkumware.hpp"
 
-1411658040 /usr/include/boost/config/no_tr1/utility.hpp
+1450371422 /usr/include/boost/config/no_tr1/utility.hpp
 	<utility>
 
-1411658034 /usr/include/boost/config/select_platform_config.hpp
+1450371393 /usr/include/boost/config/select_platform_config.hpp
+	<boost/config/posix_features.hpp>
+	"boost/config/platform/linux.hpp"
+	"boost/config/platform/bsd.hpp"
+	"boost/config/platform/solaris.hpp"
+	"boost/config/platform/irix.hpp"
+	"boost/config/platform/hpux.hpp"
+	"boost/config/platform/cygwin.hpp"
+	"boost/config/platform/win32.hpp"
+	"boost/config/platform/beos.hpp"
+	"boost/config/platform/macos.hpp"
+	"boost/config/platform/aix.hpp"
+	"boost/config/platform/amigaos.hpp"
+	"boost/config/platform/qnxnto.hpp"
+	"boost/config/platform/vxworks.hpp"
+	"boost/config/platform/symbian.hpp"
+	"boost/config/platform/cray.hpp"
+	"boost/config/platform/vms.hpp"
 	<boost/config/posix_features.hpp>
 
-1411658034 /usr/include/boost/config/posix_features.hpp
+1450371393 /usr/include/boost/config/posix_features.hpp
 	<unistd.h>
 
-1412605373 /usr/include/unistd.h
+1450366307 /usr/include/unistd.h
 	<features.h>
 	<bits/posix_opt.h>
 	<bits/environments.h>
@@ -1098,40 +1141,38 @@
 	<getopt.h>
 	<bits/unistd.h>
 
-1412605374 /usr/include/bits/posix_opt.h
+1450366307 /usr/include/bits/posix_opt.h
 
-1412605374 /usr/include/bits/environments.h
+1450366307 /usr/include/bits/environments.h
 	<bits/wordsize.h>
 
-1412605374 /usr/include/bits/confname.h
+1450366307 /usr/include/bits/confname.h
 
-1412605374 /usr/include/bits/unistd.h
+1450366307 /usr/include/bits/unistd.h
 
-1411658034 /usr/include/boost/config/suffix.hpp
+1450371393 /usr/include/boost/config/suffix.hpp
 	<limits.h>
 	<cstddef>
-	"boost/type.hpp"
-	"boost/non_type.hpp"
 	<typeinfo>
 
-1412605357 /usr/include/limits.h
+1450366277 /usr/include/limits.h
 	<features.h>
 	<bits/wordsize.h>
 	<bits/posix1_lim.h>
 	<bits/posix2_lim.h>
 	<bits/xopen_lim.h>
 
-1412605374 /usr/include/bits/posix1_lim.h
+1450366307 /usr/include/bits/posix1_lim.h
 	<bits/local_lim.h>
 
-1412605374 /usr/include/bits/local_lim.h
+1450366307 /usr/include/bits/local_lim.h
 	<linux/limits.h>
 
-1407699698 /usr/include/linux/limits.h
+1444661690 /usr/include/linux/limits.h
 
-1412605374 /usr/include/bits/posix2_lim.h
+1450366307 /usr/include/bits/posix2_lim.h
 
-1412605357 /usr/include/bits/xopen_lim.h
+1450366277 /usr/include/bits/xopen_lim.h
 	<bits/stdio_lim.h>
 	<bits/wordsize.h>
 
@@ -1139,39 +1180,25 @@
 
 1411658032 /usr/include/boost/non_type.hpp
 
-1411658032 /usr/include/boost/assert.hpp
+1450371384 /usr/include/boost/assert.hpp
+	<boost/config.hpp>
 	<boost/current_function.hpp>
 	<assert.h>
-	<boost/current_function.hpp>
-	<cstdlib>
-	<iostream>
-	<boost/current_function.hpp>
 
-1411658032 /usr/include/boost/current_function.hpp
+1450371384 /usr/include/boost/current_function.hpp
 
-1412605364 /usr/include/assert.h
+1450366290 /usr/include/assert.h
 	<features.h>
 
-1411658032 /usr/include/boost/swap.hpp
-	"boost/utility/swap.hpp"
+1450371384 /usr/include/boost/swap.hpp
+	<boost/core/swap.hpp>
 
 1411658035 /usr/include/boost/utility/swap.hpp
 	<algorithm>
 	<cstddef>
 
-1411658039 /usr/include/boost/detail/iterator.hpp
-	<boost/config.hpp>
+1450371390 /usr/include/boost/detail/iterator.hpp
 	<iterator>
-	<boost/type_traits/remove_const.hpp>
-	<boost/type_traits/detail/yes_no_type.hpp>
-	<boost/type_traits/is_pointer.hpp>
-	<boost/type_traits/is_same.hpp>
-	<boost/type_traits/remove_pointer.hpp>
-	<boost/type_traits/is_base_and_derived.hpp>
-	<boost/mpl/if.hpp>
-	<boost/mpl/has_xxx.hpp>
-	<cstddef>
-	"boost/type_traits/detail/bool_trait_def.hpp"
 
 1411658034 /usr/include/boost/type_traits/remove_const.hpp
 	<boost/type_traits/is_volatile.hpp>
@@ -2188,8 +2215,7 @@
 	<boost/preprocessor/config/config.hpp>
 	<boost/preprocessor/repetition/repeat.hpp>
 
-1411658032 /usr/include/boost/throw_exception.hpp
-	<boost/exception/detail/attribute_noreturn.hpp>
+1450371384 /usr/include/boost/throw_exception.hpp
 	<boost/detail/workaround.hpp>
 	<boost/config.hpp>
 	<exception>
@@ -2198,18 +2224,20 @@
 
 1411658043 /usr/include/boost/exception/detail/attribute_noreturn.hpp
 
-1411658035 /usr/include/boost/exception/exception.hpp
+1450371389 /usr/include/boost/exception/exception.hpp
 
-1411658036 /usr/include/boost/functional/hash_fwd.hpp
+1450371386 /usr/include/boost/functional/hash_fwd.hpp
+	<boost/config.hpp>
 	<boost/functional/hash/hash_fwd.hpp>
 
-1411658045 /usr/include/boost/functional/hash/hash_fwd.hpp
+1450371397 /usr/include/boost/functional/hash/hash_fwd.hpp
 	<boost/config.hpp>
 	<cstddef>
 	<boost/detail/workaround.hpp>
 
-1412605366 /usr/include/math.h
+1450366295 /usr/include/math.h
 	<features.h>
+	<bits/math-vector.h>
 	<bits/huge_val.h>
 	<bits/huge_valf.h>
 	<bits/huge_vall.h>
@@ -2222,30 +2250,30 @@
 	<bits/mathinline.h>
 	<bits/math-finite.h>
 
-1412605366 /usr/include/bits/huge_val.h
+1450366295 /usr/include/bits/huge_val.h
 	<endian.h>
 
-1412605366 /usr/include/bits/huge_valf.h
+1450366295 /usr/include/bits/huge_valf.h
 
-1412605366 /usr/include/bits/huge_vall.h
+1450366295 /usr/include/bits/huge_vall.h
 
-1412605366 /usr/include/bits/inf.h
+1450366295 /usr/include/bits/inf.h
 
-1412605366 /usr/include/bits/nan.h
+1450366295 /usr/include/bits/nan.h
 	<endian.h>
 
-1412605366 /usr/include/bits/mathdef.h
+1450366296 /usr/include/bits/mathdef.h
 
-1412605366 /usr/include/bits/mathcalls.h
+1450366295 /usr/include/bits/mathcalls.h
 
-1412605366 /usr/include/bits/mathinline.h
+1450366295 /usr/include/bits/mathinline.h
 
-1412605366 /usr/include/bits/math-finite.h
+1450366296 /usr/include/bits/math-finite.h
 
-1397211326 /usr/include/opencv2/core/core_c.h
+1424866231 /usr/include/opencv2/core/core_c.h
 	"opencv2/core/types_c.h"
 
-1397211326 /usr/include/opencv2/core/types_c.h
+1424866231 /usr/include/opencv2/core/types_c.h
 	<assert.h>
 	<stdlib.h>
 	<string.h>
@@ -2260,12 +2288,12 @@
 	"tegra_round.hpp"
 	"emmintrin.h"
 
-1412605368 /usr/include/stdint.h
+1450366299 /usr/include/stdint.h
 	<features.h>
 	<bits/wchar.h>
 	<bits/wordsize.h>
 
-1397211326 /usr/include/opencv2/core/core.hpp
+1424866231 /usr/include/opencv2/core/core.hpp
 	"opencv2/core/types_c.h"
 	"opencv2/core/version.hpp"
 	<limits.h>
@@ -2281,88 +2309,89 @@
 	"opencv2/core/operations.hpp"
 	"opencv2/core/mat.hpp"
 
-1397211326 /usr/include/opencv2/core/version.hpp
+1424866231 /usr/include/opencv2/core/version.hpp
 
-1397211326 /usr/include/opencv2/core/operations.hpp
+1424866231 /usr/include/opencv2/core/operations.hpp
 	<string.h>
 	<limits.h>
 	<ext/atomicity.h>
 	<bits/atomicity.h>
 	<limits>
 
-1397211326 /usr/include/opencv2/core/mat.hpp
+1424866231 /usr/include/opencv2/core/mat.hpp
 	<limits.h>
 	<string.h>
 
-1397211326 /usr/include/opencv2/flann/miniflann.hpp
+1424866231 /usr/include/opencv2/flann/miniflann.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/flann/defines.h"
 
-1397211326 /usr/include/opencv2/flann/defines.h
+1424866231 /usr/include/opencv2/flann/defines.h
 	"config.h"
 
-1397211326 /usr/include/opencv2/flann/config.h
+1424866231 /usr/include/opencv2/flann/config.h
 
-1397211326 /usr/include/opencv2/imgproc/imgproc_c.h
+1424866231 /usr/include/opencv2/imgproc/imgproc_c.h
 	"opencv2/core/core_c.h"
 	"opencv2/imgproc/types_c.h"
 
-1397211326 /usr/include/opencv2/imgproc/types_c.h
+1424866231 /usr/include/opencv2/imgproc/types_c.h
 	"opencv2/core/core_c.h"
 
-1397211326 /usr/include/opencv2/imgproc/imgproc.hpp
+1424866231 /usr/include/opencv2/imgproc/imgproc.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/imgproc/types_c.h"
 
-1397211326 /usr/include/opencv2/photo/photo.hpp
+1424866231 /usr/include/opencv2/photo/photo.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/imgproc/imgproc.hpp"
 	"opencv2/photo/photo_c.h"
 
-1397211326 /usr/include/opencv2/photo/photo_c.h
+1424866231 /usr/include/opencv2/photo/photo_c.h
 	"opencv2/core/core_c.h"
 
-1397211326 /usr/include/opencv2/video/video.hpp
+1424866231 /usr/include/opencv2/video/video.hpp
 	"opencv2/video/tracking.hpp"
 	"opencv2/video/background_segm.hpp"
 
-1397211326 /usr/include/opencv2/video/tracking.hpp
+1424866231 /usr/include/opencv2/video/tracking.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/imgproc/imgproc.hpp"
 
-1397211326 /usr/include/opencv2/video/background_segm.hpp
+1424866231 /usr/include/opencv2/video/background_segm.hpp
 	"opencv2/core/core.hpp"
 	<list>
 
-1397211326 /usr/include/opencv2/features2d/features2d.hpp
+1424866231 /usr/include/opencv2/features2d/features2d.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/flann/miniflann.hpp"
 	<limits>
 
-1397211326 /usr/include/opencv2/objdetect/objdetect.hpp
+1424866231 /usr/include/opencv2/objdetect/objdetect.hpp
 	"opencv2/core/core.hpp"
 	<map>
 	<deque>
 
-1397211326 /usr/include/opencv2/calib3d/calib3d.hpp
+1424866231 /usr/include/opencv2/calib3d/calib3d.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/features2d/features2d.hpp"
+	"opencv2/core/affine.hpp"
 
-1397211326 /usr/include/opencv2/ml/ml.hpp
+1424866231 /usr/include/opencv2/ml/ml.hpp
 	"opencv2/core/core.hpp"
 	<limits.h>
 	<map>
 	<string>
 	<iostream>
 
-1397211326 /usr/include/opencv2/highgui/highgui_c.h
+1424866231 /usr/include/opencv2/highgui/highgui_c.h
 	"opencv2/core/core_c.h"
 
-1397211326 /usr/include/opencv2/highgui/highgui.hpp
+1424866231 /usr/include/opencv2/highgui/highgui.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/highgui/highgui_c.h"
 
-1397211326 /usr/include/opencv2/contrib/contrib.hpp
+1424866231 /usr/include/opencv2/contrib/contrib.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/imgproc/imgproc.hpp"
 	"opencv2/features2d/features2d.hpp"
@@ -2370,11 +2399,11 @@
 	"opencv2/contrib/retina.hpp"
 	"opencv2/contrib/openfabmap.hpp"
 
-1397211326 /usr/include/opencv2/contrib/retina.hpp
+1424866231 /usr/include/opencv2/contrib/retina.hpp
 	"opencv2/core/core.hpp"
 	<valarray>
 
-1397211326 /usr/include/opencv2/contrib/openfabmap.hpp
+1424866231 /usr/include/opencv2/contrib/openfabmap.hpp
 	"opencv2/core/core.hpp"
 	"opencv2/features2d/features2d.hpp"
 	<vector>
@@ -2383,7 +2412,7 @@
 	<set>
 	<valarray>
 
-1412605373 /usr/include/dirent.h
+1450366305 /usr/include/dirent.h
 	<features.h>
 	<bits/types.h>
 	<bits/dirent.h>
@@ -2391,14 +2420,14 @@
 	<bits/posix1_lim.h>
 	<stddef.h>
 
-1412605373 /usr/include/bits/dirent.h
+1450366305 /usr/include/bits/dirent.h
 
-1412605371 /usr/include/malloc.h
+1450366303 /usr/include/malloc.h
 	<features.h>
 	<stddef.h>
 	<stdio.h>
 
-1412605372 /usr/include/sys/timeb.h
+1450366305 /usr/include/sys/timeb.h
 	<features.h>
 	<time.h>
 
@@ -2406,9 +2435,8 @@
 	<map>
 	<string>
 
-1417004893 source:/home/charalambos/git/StructurePointcloud/GeometryExporter.cpp
+1418044937 source:/home/charalambos/git/StructurePointcloud/GeometryExporter.cpp
 	"GeometryExporter.h"
-	"Monitoring.h"
 
 1414597729 /home/charalambos/git/StructurePointcloud/GeometryExporter.h
 	<time.h>
@@ -2416,16 +2444,1396 @@
 	"Utilities.h"
 	"GeometricObject.h"
 
-1415099522 /usr/include/ImageMagick-6/magick/opencl.h
+1452272681 /usr/include/ImageMagick-6/magick/opencl.h
 
-1415099522 /usr/include/ImageMagick-6/Magick++/Functions.h
+1452272681 /usr/include/ImageMagick-6/Magick++/Functions.h
 	"Magick++/Include.h"
 	<string>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/ChannelMoments.h
+1452272681 /usr/include/ImageMagick-6/Magick++/ChannelMoments.h
 	"Magick++/Include.h"
 	<vector>
 
-1415099522 /usr/include/ImageMagick-6/Magick++/ResourceLimits.h
+1452272681 /usr/include/ImageMagick-6/Magick++/ResourceLimits.h
 	"Magick++/Include.h"
+
+1138725882 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/fft_3D/support_3D.cpp
+	"support_3D.h"
+
+1335166592 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/fft_3D/support_3D.h
+	<cmath>
+	<errno.h>
+	<stdio.h>
+	<sstream>
+	<stdlib.h>
+	<string.h>
+	"fftw3.h"
+	"msg_stream.h"
+
+1162890362 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/msg_stream.h
+	<iostream>
+	<string>
+
+1418044896 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/BoundingBox.cpp
+	"BoundingBox.h"
+
+1450825342 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/BoundingBox.h
+	<float.h>
+	"Eigen/Eigen"
+
+1417010314 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Vector.h
+	<stdarg.h>
+	<boost/array.hpp>
+	<math.h>
+	<vector>
+
+1450371393 /usr/include/boost/config/user.hpp
+
+1450371422 /usr/include/boost/config/compiler/nvcc.hpp
+
+1450371422 /usr/include/boost/config/compiler/gcc_xml.hpp
+
+1450371422 /usr/include/boost/config/compiler/cray.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/common_edg.hpp
+
+1450371422 /usr/include/boost/config/compiler/comeau.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/pathscale.hpp
+
+1450371422 /usr/include/boost/config/compiler/intel.hpp
+	<boost/config/compiler/visualc.hpp>
+	<boost/config/compiler/gcc.hpp>
+	"boost/config/compiler/common_edg.hpp"
+	<cwchar>
+
+1450371422 /usr/include/boost/config/compiler/visualc.hpp
+
+1450371422 /usr/include/boost/config/compiler/gcc.hpp
+
+1450371422 /usr/include/boost/config/compiler/clang.hpp
+
+1450371422 /usr/include/boost/config/compiler/digitalmars.hpp
+	<cstddef>
+
+1450371422 /usr/include/boost/config/compiler/kai.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/sgi_mipspro.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/compaq_cxx.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/greenhills.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/codegear.hpp
+	<cstring>
+	<errno.h>
+
+1450371422 /usr/include/boost/config/compiler/borland.hpp
+	<climits>
+	<cwchar>
+	<limits.h>
+	<wchar.h>
+	<cstring>
+	<errno.h>
+	<float.h>
+
+1450371422 /usr/include/boost/config/compiler/metrowerks.hpp
+
+1450371422 /usr/include/boost/config/compiler/sunpro_cc.hpp
+
+1450371422 /usr/include/boost/config/compiler/hp_acc.hpp
+	"boost/config/compiler/common_edg.hpp"
+
+1450371422 /usr/include/boost/config/compiler/mpw.hpp
+
+1450371422 /usr/include/boost/config/compiler/vacpp.hpp
+
+1450371422 /usr/include/boost/config/compiler/pgi.hpp
+
+1450371422 /usr/include/boost/config/stdlib/stlport.hpp
+	<cstddef>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<algorithm>
+
+1450371422 /usr/include/boost/config/stdlib/libcomo.hpp
+	<boost/config/no_tr1/utility.hpp>
+
+1450371422 /usr/include/boost/config/stdlib/roguewave.hpp
+	<boost/config/no_tr1/utility.hpp>
+
+1450371422 /usr/include/boost/config/stdlib/libcpp.hpp
+	<ciso646>
+
+1450371422 /usr/include/boost/config/stdlib/libstdcpp3.hpp
+	<unistd.h>
+
+1450371422 /usr/include/boost/config/stdlib/sgi.hpp
+	<boost/config/no_tr1/utility.hpp>
+	<unistd.h>
+	<string>
+
+1450371422 /usr/include/boost/config/stdlib/msl.hpp
+	<boost/config/no_tr1/utility.hpp>
+	<cstddef>
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/stdlib/vacpp.hpp
+	<unistd.h>
+
+1450371422 /usr/include/boost/config/stdlib/modena.hpp
+	<boost/config/no_tr1/utility.hpp>
+
+1450371422 /usr/include/boost/config/stdlib/dinkumware.hpp
+	<boost/config/no_tr1/utility.hpp>
+	<exception>
+	<typeinfo>
+
+1450371422 /usr/include/boost/config/platform/linux.hpp
+	<cstdlib>
+	<stdlib.h>
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/bsd.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/solaris.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/irix.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/hpux.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/cygwin.hpp
+	<unistd.h>
+	<sys/types.h>
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/win32.hpp
+	<_mingw.h>
+
+1450371422 /usr/include/boost/config/platform/beos.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/macos.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/aix.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/amigaos.hpp
+
+1450371422 /usr/include/boost/config/platform/qnxnto.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/vxworks.hpp
+	<version.h>
+	<time.h>
+	<sysLib.h>
+	<cstdint>
+	<ioLib.h>
+	<tickLib.h>
+	<sys/time.h>
+	<signal.h>
+	<boost/config/posix_features.hpp>
+
+1450366305 /usr/include/sys/time.h
+	<features.h>
+	<bits/types.h>
+	<time.h>
+	<bits/time.h>
+	<sys/select.h>
+
+1450366298 /usr/include/signal.h
+	<features.h>
+	<bits/sigset.h>
+	<bits/types.h>
+	<bits/signum.h>
+	<time.h>
+	<bits/siginfo.h>
+	<bits/sigaction.h>
+	<bits/sigcontext.h>
+	<stddef.h>
+	<bits/sigstack.h>
+	<sys/ucontext.h>
+	<bits/pthreadtypes.h>
+	<bits/sigthread.h>
+
+1450366298 /usr/include/bits/signum.h
+
+1450366298 /usr/include/bits/siginfo.h
+	<bits/wordsize.h>
+
+1450366298 /usr/include/bits/sigaction.h
+
+1450366298 /usr/include/bits/sigcontext.h
+
+1450366298 /usr/include/bits/sigstack.h
+
+1450366299 /usr/include/sys/ucontext.h
+	<features.h>
+	<signal.h>
+	<bits/sigcontext.h>
+
+1450366298 /usr/include/bits/sigthread.h
+
+1450371422 /usr/include/boost/config/platform/symbian.hpp
+	<cstdlib>
+	<stdlib.h>
+	<boost/config/posix_features.hpp>
+	<sys/endian.h>
+
+1450371422 /usr/include/boost/config/platform/cray.hpp
+	<boost/config/posix_features.hpp>
+
+1450371422 /usr/include/boost/config/platform/vms.hpp
+
+1450371390 /usr/include/boost/core/swap.hpp
+	<utility>
+	<algorithm>
+	<cstddef>
+	<boost/config.hpp>
+
+1450366296 /usr/include/bits/math-vector.h
+	<bits/libm-simd-decl-stubs.h>
+
+1450366296 /usr/include/bits/libm-simd-decl-stubs.h
+
+1414597553 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Color.cpp
+	"Color.h"
+	"Monitoring.h"
+
+1428490125 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Color.h
+	<math.h>
+	<Eigen/Eigen>
+
+1418044932 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometricObject.cpp
+	"GeometricObject.h"
+	"GeometryProcessing.h"
+
+1450824982 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometricObject.h
+	<math.h>
+	<iostream>
+	"Edge.h"
+	"Face.h"
+	"Eigen/Eigen"
+
+1299865536 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Edge.h
+
+1414261360 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Face.h
+	<vector>
+	"Edge.h"
+
+1428481426 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometryProcessing.h
+	<float.h>
+	"opencv.hpp"
+	"Image.h"
+	"Color.h"
+	<Eigen/Eigen>
+	"Utilities.h"
+	"GeometricObject.h"
+
+1424866231 /usr/include/opencv2/core/affine.hpp
+	<opencv2/core/core.hpp>
+
+1414583138 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.h
+	<ostream>
+	<float.h>
+	"Color.h"
+	"Magick++.h"
+	"FileUtilities.h"
+
+1452272681 /usr/include/ImageMagick-6/magick/vision.h
+
+1413656420 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/FileUtilities.h
+	<string.h>
+	<sys/types.h>
+	<dirent.h>
+	<errno.h>
+	<vector>
+	<string>
+	<iostream>
+
+1450824998 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Utilities.h
+	<stdarg.h>
+	<malloc.h>
+	<string.h>
+	<string>
+	<vector>
+	<iterator>
+	<algorithm>
+	"Eigen/Eigen"
+	<time.h>
+	<sys/types.h>
+	<sys/timeb.h>
+	<math.h>
+
+1418044938 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometryExporter.cpp
+	"GeometryExporter.h"
+
+1414594130 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometryExporter.h
+	<time.h>
+	"Face.h"
+	"Utilities.h"
+	"GeometricObject.h"
+
+1450824510 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeometryProcessing.cpp
+	"GeometryProcessing.h"
+	"Color.h"
+
+1418045340 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Image.cpp
+	"Image.h"
+	"Utilities.h"
+	"GeometryProcessing.h"
+	"ImageProcessing.h"
+	"BoundingBox.h"
+
+1414583352 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/ImageProcessing.h
+	"fftw3.h"
+	<cmath>
+	<algorithm>
+	<fstream>
+	<iostream>
+	<sstream>
+	"geom.h"
+	"fast_color_bf.h"
+	"linear_bf.h"
+
+1162890362 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/geom.h
+	<cmath>
+	<vector>
+	<iostream>
+
+1346684294 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/fast_color_bf.h
+	"mixed_vector.h"
+	<iostream>
+	"chrono.h"
+	"array.h"
+	"array_n.h"
+	"math_tools.h"
+
+1163360472 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/mixed_vector.h
+
+1163360464 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/chrono.h
+	<ctime>
+	<iostream>
+	<sstream>
+	<string>
+	"msg_stream.h"
+
+1417002460 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/array.h
+	<stdexcept>
+	<iostream>
+	<vector>
+	<sstream>
+	<qdom.h>
+
+1163360450 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/array_n.h
+	<stdexcept>
+	<iostream>
+	<algorithm>
+	<vector>
+	"geom.h"
+
+1162890362 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/math_tools.h
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<limits>
+	<numeric>
+	<vector>
+	<limits>
+	"array.h"
+	"array_n.h"
+	"geom.h"
+	"msg_stream.h"
+
+1335260408 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/linear_bf.h
+	<cmath>
+	"array.h"
+	"fft_3D.h"
+	"math_tools.h"
+	<iostream>
+	"chrono.h"
+
+1138723212 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/include/fft_3D.h
+	"fft_3D/convolution_3D.h"
+	"fft_3D/fill_3D.h"
+	"fft_3D/support_3D.h"
+
+1138725814 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/fft_3D/convolution_3D.h
+	<algorithm>
+	"fftw3.h"
+	"fft_3D/support_3D.h"
+
+1149505170 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/bilateral_filtering/fft_3D/fill_3D.h
+
+1450832324 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/ImageProcessing.cpp
+	"ImageProcessing.h"
+	"Image.h"
+	"Color.h"
+
+1450825713 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/main.cpp
+	"Eigen/Eigen"
+	"BoundingBox.h"
+	"GeometryExporter.h"
+	"GeospatialBoundingBox.h"
+
+1450825347 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.h
+	<float.h>
+	<iostream>
+	<fstream>
+	"Eigen/Eigen"
+	"BoundingBox.h"
+	"ImageProcessing.h"
+	"GeometryProcessing.h"
+	"Image.h"
+	"Utilities.h"
+	"Sorter.h"
+	<vector>
+
+1450825625 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Sorter.h
+	<stdio.h>
+	"Eigen/Eigen"
+	<vector>
+
+1446735369 /usr/include/eigen3/Eigen/Eigen
+	"Dense"
+
+1446735369 /usr/include/eigen3/Eigen/Dense
+	"Core"
+	"LU"
+	"Cholesky"
+	"QR"
+	"SVD"
+	"Geometry"
+	"Eigenvalues"
+
+1449699764 /usr/include/eigen3/Eigen/Core
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/Core/util/Macros.h"
+	<complex>
+	"src/Core/util/MKL_support.h"
+	<malloc.h>
+	<immintrin.h>
+	<emmintrin.h>
+	<xmmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<omp.h>
+	<cerrno>
+	<cstddef>
+	<cstdlib>
+	<cmath>
+	<cassert>
+	<functional>
+	<iosfwd>
+	<cstring>
+	<string>
+	<limits>
+	<climits>
+	<algorithm>
+	<iostream>
+	<intrin.h>
+	<new>
+	"src/Core/util/Constants.h"
+	"src/Core/util/ForwardDeclarations.h"
+	"src/Core/util/Meta.h"
+	"src/Core/util/StaticAssert.h"
+	"src/Core/util/XprHelper.h"
+	"src/Core/util/Memory.h"
+	"src/Core/NumTraits.h"
+	"src/Core/MathFunctions.h"
+	"src/Core/GenericPacketMath.h"
+	"src/Core/arch/SSE/PacketMath.h"
+	"src/Core/arch/SSE/MathFunctions.h"
+	"src/Core/arch/SSE/Complex.h"
+	"src/Core/arch/AltiVec/PacketMath.h"
+	"src/Core/arch/AltiVec/Complex.h"
+	"src/Core/arch/NEON/PacketMath.h"
+	"src/Core/arch/NEON/Complex.h"
+	"src/Core/arch/Default/Settings.h"
+	"src/Core/Functors.h"
+	"src/Core/DenseCoeffsBase.h"
+	"src/Core/DenseBase.h"
+	"src/Core/MatrixBase.h"
+	"src/Core/EigenBase.h"
+	"src/Core/Assign.h"
+	"src/Core/util/BlasUtil.h"
+	"src/Core/DenseStorage.h"
+	"src/Core/NestByValue.h"
+	"src/Core/ForceAlignedAccess.h"
+	"src/Core/ReturnByValue.h"
+	"src/Core/NoAlias.h"
+	"src/Core/PlainObjectBase.h"
+	"src/Core/Matrix.h"
+	"src/Core/Array.h"
+	"src/Core/CwiseBinaryOp.h"
+	"src/Core/CwiseUnaryOp.h"
+	"src/Core/CwiseNullaryOp.h"
+	"src/Core/CwiseUnaryView.h"
+	"src/Core/SelfCwiseBinaryOp.h"
+	"src/Core/Dot.h"
+	"src/Core/StableNorm.h"
+	"src/Core/MapBase.h"
+	"src/Core/Stride.h"
+	"src/Core/Map.h"
+	"src/Core/Block.h"
+	"src/Core/VectorBlock.h"
+	"src/Core/Ref.h"
+	"src/Core/Transpose.h"
+	"src/Core/DiagonalMatrix.h"
+	"src/Core/Diagonal.h"
+	"src/Core/DiagonalProduct.h"
+	"src/Core/PermutationMatrix.h"
+	"src/Core/Transpositions.h"
+	"src/Core/Redux.h"
+	"src/Core/Visitor.h"
+	"src/Core/Fuzzy.h"
+	"src/Core/IO.h"
+	"src/Core/Swap.h"
+	"src/Core/CommaInitializer.h"
+	"src/Core/Flagged.h"
+	"src/Core/ProductBase.h"
+	"src/Core/GeneralProduct.h"
+	"src/Core/TriangularMatrix.h"
+	"src/Core/SelfAdjointView.h"
+	"src/Core/products/GeneralBlockPanelKernel.h"
+	"src/Core/products/Parallelizer.h"
+	"src/Core/products/CoeffBasedProduct.h"
+	"src/Core/products/GeneralMatrixVector.h"
+	"src/Core/products/GeneralMatrixMatrix.h"
+	"src/Core/SolveTriangular.h"
+	"src/Core/products/GeneralMatrixMatrixTriangular.h"
+	"src/Core/products/SelfadjointMatrixVector.h"
+	"src/Core/products/SelfadjointMatrixMatrix.h"
+	"src/Core/products/SelfadjointProduct.h"
+	"src/Core/products/SelfadjointRank2Update.h"
+	"src/Core/products/TriangularMatrixVector.h"
+	"src/Core/products/TriangularMatrixMatrix.h"
+	"src/Core/products/TriangularSolverMatrix.h"
+	"src/Core/products/TriangularSolverVector.h"
+	"src/Core/BandMatrix.h"
+	"src/Core/CoreIterators.h"
+	"src/Core/BooleanRedux.h"
+	"src/Core/Select.h"
+	"src/Core/VectorwiseOp.h"
+	"src/Core/Random.h"
+	"src/Core/Replicate.h"
+	"src/Core/Reverse.h"
+	"src/Core/ArrayBase.h"
+	"src/Core/ArrayWrapper.h"
+	"src/Core/products/GeneralMatrixMatrix_MKL.h"
+	"src/Core/products/GeneralMatrixVector_MKL.h"
+	"src/Core/products/GeneralMatrixMatrixTriangular_MKL.h"
+	"src/Core/products/SelfadjointMatrixMatrix_MKL.h"
+	"src/Core/products/SelfadjointMatrixVector_MKL.h"
+	"src/Core/products/TriangularMatrixMatrix_MKL.h"
+	"src/Core/products/TriangularMatrixVector_MKL.h"
+	"src/Core/products/TriangularSolverMatrix_MKL.h"
+	"src/Core/Assign_MKL.h"
+	"src/Core/GlobalFunctions.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+	"Eigen2Support"
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
+
+1449699764 /usr/include/eigen3/Eigen/src/Core/util/Macros.h
+	<cstdlib>
+	<iostream>
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h
+	<mkl.h>
+	<mkl_lapacke.h>
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/Constants.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/Meta.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/Memory.h
+	<unistd.h>
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/NumTraits.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Functors.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/DenseBase.h
+	"../plugins/BlockMethods.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/MatrixBase.h
+	"../plugins/CommonCwiseUnaryOps.h"
+	"../plugins/CommonCwiseBinaryOps.h"
+	"../plugins/MatrixCwiseUnaryOps.h"
+	"../plugins/MatrixCwiseBinaryOps.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/EigenBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Assign.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/NestByValue.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/ForceAlignedAccess.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/NoAlias.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Matrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Array.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Dot.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/StableNorm.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/MapBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Stride.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Map.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Block.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Ref.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Transpose.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Diagonal.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Transpositions.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Redux.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Visitor.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Fuzzy.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/IO.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Swap.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Flagged.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/ProductBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Select.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Random.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Replicate.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Reverse.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
+	"../plugins/CommonCwiseUnaryOps.h"
+	"../plugins/MatrixCwiseUnaryOps.h"
+	"../plugins/ArrayCwiseUnaryOps.h"
+	"../plugins/CommonCwiseBinaryOps.h"
+	"../plugins/MatrixCwiseBinaryOps.h"
+	"../plugins/ArrayCwiseBinaryOps.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+1446735369 /usr/include/eigen3/Eigen/Eigen2Support
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/Eigen2Support/Macros.h"
+	"src/Eigen2Support/Memory.h"
+	"src/Eigen2Support/Meta.h"
+	"src/Eigen2Support/Lazy.h"
+	"src/Eigen2Support/Cwise.h"
+	"src/Eigen2Support/CwiseOperators.h"
+	"src/Eigen2Support/TriangularSolver.h"
+	"src/Eigen2Support/Block.h"
+	"src/Eigen2Support/VectorBlock.h"
+	"src/Eigen2Support/Minor.h"
+	"src/Eigen2Support/MathFunctions.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+	<iostream>
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Macros.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Memory.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Meta.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Lazy.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Cwise.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/CwiseOperators.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/TriangularSolver.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Block.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/VectorBlock.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Minor.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/MathFunctions.h
+
+1446735369 /usr/include/eigen3/Eigen/LU
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/misc/Solve.h"
+	"src/misc/Kernel.h"
+	"src/misc/Image.h"
+	"src/LU/FullPivLU.h"
+	"src/LU/PartialPivLU.h"
+	"src/LU/PartialPivLU_MKL.h"
+	"src/LU/Determinant.h"
+	"src/LU/Inverse.h"
+	"src/LU/arch/Inverse_SSE.h"
+	"src/Eigen2Support/LU.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/misc/Solve.h
+
+1446735369 /usr/include/eigen3/Eigen/src/misc/Kernel.h
+
+1446735369 /usr/include/eigen3/Eigen/src/misc/Image.h
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/Determinant.h
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/Inverse.h
+
+1446735369 /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/LU.h
+
+1446735369 /usr/include/eigen3/Eigen/Cholesky
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/misc/Solve.h"
+	"src/Cholesky/LLT.h"
+	"src/Cholesky/LDLT.h"
+	"src/Cholesky/LLT_MKL.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+	<iostream>
+
+1446735369 /usr/include/eigen3/Eigen/QR
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"Cholesky"
+	"Jacobi"
+	"Householder"
+	"src/misc/Solve.h"
+	"src/QR/HouseholderQR.h"
+	"src/QR/FullPivHouseholderQR.h"
+	"src/QR/ColPivHouseholderQR.h"
+	"src/QR/HouseholderQR_MKL.h"
+	"src/QR/ColPivHouseholderQR_MKL.h"
+	"src/Eigen2Support/QR.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+	"Eigenvalues"
+
+1446735369 /usr/include/eigen3/Eigen/Jacobi
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/Jacobi/Jacobi.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
+
+1446735369 /usr/include/eigen3/Eigen/Householder
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/Householder/Householder.h"
+	"src/Householder/HouseholderSequence.h"
+	"src/Householder/BlockHouseholder.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Householder/Householder.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h
+
+1446735369 /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
+
+1446735369 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
+
+1446735369 /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h
+
+1446735369 /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
+	"../Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/QR.h
+
+1446735369 /usr/include/eigen3/Eigen/Eigenvalues
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"Cholesky"
+	"Jacobi"
+	"Householder"
+	"LU"
+	"Geometry"
+	"src/Eigenvalues/Tridiagonalization.h"
+	"src/Eigenvalues/RealSchur.h"
+	"src/Eigenvalues/EigenSolver.h"
+	"src/Eigenvalues/SelfAdjointEigenSolver.h"
+	"src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h"
+	"src/Eigenvalues/HessenbergDecomposition.h"
+	"src/Eigenvalues/ComplexSchur.h"
+	"src/Eigenvalues/ComplexEigenSolver.h"
+	"src/Eigenvalues/RealQZ.h"
+	"src/Eigenvalues/GeneralizedEigenSolver.h"
+	"src/Eigenvalues/MatrixBaseEigenvalues.h"
+	"src/Eigenvalues/RealSchur_MKL.h"
+	"src/Eigenvalues/ComplexSchur_MKL.h"
+	"src/Eigenvalues/SelfAdjointEigenSolver_MKL.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/Geometry
+	"Core"
+	"src/Core/util/DisableStupidWarnings.h"
+	"SVD"
+	"LU"
+	<limits>
+	"src/Geometry/OrthoMethods.h"
+	"src/Geometry/EulerAngles.h"
+	"src/Geometry/Homogeneous.h"
+	"src/Geometry/RotationBase.h"
+	"src/Geometry/Rotation2D.h"
+	"src/Geometry/Quaternion.h"
+	"src/Geometry/AngleAxis.h"
+	"src/Geometry/Transform.h"
+	"src/Geometry/Translation.h"
+	"src/Geometry/Scaling.h"
+	"src/Geometry/Hyperplane.h"
+	"src/Geometry/ParametrizedLine.h"
+	"src/Geometry/AlignedBox.h"
+	"src/Geometry/Umeyama.h"
+	"src/Geometry/arch/Geometry_SSE.h"
+	"src/Eigen2Support/Geometry/All.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/SVD
+	"QR"
+	"Householder"
+	"Jacobi"
+	"src/Core/util/DisableStupidWarnings.h"
+	"src/misc/Solve.h"
+	"src/SVD/JacobiSVD.h"
+	"src/SVD/JacobiSVD_MKL.h"
+	"src/SVD/UpperBidiagonalization.h"
+	"src/Eigen2Support/SVD.h"
+	"src/Core/util/ReenableStupidWarnings.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
+
+1446735369 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/SVD.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/RotationBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Transform.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Translation.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Scaling.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Hyperplane.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/All.h
+	<limits>
+	"RotationBase.h"
+	"Rotation2D.h"
+	"Quaternion.h"
+	"AngleAxis.h"
+	"Transform.h"
+	"Translation.h"
+	"Scaling.h"
+	"AlignedBox.h"
+	"Hyperplane.h"
+	"ParametrizedLine.h"
+	"RotationBase.h"
+	"Rotation2D.h"
+	"Quaternion.h"
+	"AngleAxis.h"
+	"Transform.h"
+	"Translation.h"
+	"Scaling.h"
+	"AlignedBox.h"
+	"Hyperplane.h"
+	"ParametrizedLine.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/RotationBase.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Rotation2D.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Quaternion.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/AngleAxis.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Transform.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Translation.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Scaling.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/AlignedBox.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/Hyperplane.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/ParametrizedLine.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h
+	"./HessenbergDecomposition.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h
+	"./RealSchur.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+	"./Tridiagonalization.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+	"./Tridiagonalization.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h
+	"./HessenbergDecomposition.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+	"./ComplexSchur.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+	"./RealQZ.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1446735369 /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_MKL.h
+	"Eigen/src/Core/util/MKL_support.h"
+
+1414594742 /home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/Monitoring.h
+	<map>
+	<string>
+
+1450830428 source:/home/charalambos/Documents/CODE/GITHUB_PROJECTS/StructurePointcloud/GeospatialBoundingBox.cpp
+	"GeospatialBoundingBox.h"
+
+1138725882 source:/home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/fft_3D/support_3D.cpp
+	"support_3D.h"
+
+1335166592 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/fft_3D/support_3D.h
+	<cmath>
+	<errno.h>
+	<stdio.h>
+	<sstream>
+	<stdlib.h>
+	<string.h>
+	"fftw3.h"
+	"msg_stream.h"
+
+1162890362 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/msg_stream.h
+	<iostream>
+	<string>
+
+1418044896 source:/home/charalambos/Documents/CODE/StructurePointcloud/BoundingBox.cpp
+	"BoundingBox.h"
+
+1450825342 /home/charalambos/Documents/CODE/StructurePointcloud/BoundingBox.h
+	<float.h>
+	"Eigen/Eigen"
+
+1418044834 source:/home/charalambos/Documents/CODE/StructurePointcloud/Color.cpp
+	"Color.h"
+
+1428490125 /home/charalambos/Documents/CODE/StructurePointcloud/Color.h
+	<math.h>
+	<Eigen/Eigen>
+
+1418044932 source:/home/charalambos/Documents/CODE/StructurePointcloud/GeometricObject.cpp
+	"GeometricObject.h"
+	"GeometryProcessing.h"
+
+1450824982 /home/charalambos/Documents/CODE/StructurePointcloud/GeometricObject.h
+	<math.h>
+	<iostream>
+	"Edge.h"
+	"Face.h"
+	"Eigen/Eigen"
+
+1299865536 /home/charalambos/Documents/CODE/StructurePointcloud/Edge.h
+
+1414261360 /home/charalambos/Documents/CODE/StructurePointcloud/Face.h
+	<vector>
+	"Edge.h"
+
+1428481426 /home/charalambos/Documents/CODE/StructurePointcloud/GeometryProcessing.h
+	<float.h>
+	"opencv.hpp"
+	"Image.h"
+	"Color.h"
+	<Eigen/Eigen>
+	"Utilities.h"
+	"GeometricObject.h"
+
+1433506795 /home/charalambos/Documents/CODE/StructurePointcloud/Image.h
+	<ostream>
+	<float.h>
+	"Color.h"
+	"Magick++.h"
+	"FileUtilities.h"
+
+1413656420 /home/charalambos/Documents/CODE/StructurePointcloud/FileUtilities.h
+	<string.h>
+	<sys/types.h>
+	<dirent.h>
+	<errno.h>
+	<vector>
+	<string>
+	<iostream>
+
+1450824998 /home/charalambos/Documents/CODE/StructurePointcloud/Utilities.h
+	<stdarg.h>
+	<malloc.h>
+	<string.h>
+	<string>
+	<vector>
+	<iterator>
+	<algorithm>
+	"Eigen/Eigen"
+	<time.h>
+	<sys/types.h>
+	<sys/timeb.h>
+	<math.h>
+
+1418044938 source:/home/charalambos/Documents/CODE/StructurePointcloud/GeometryExporter.cpp
+	"GeometryExporter.h"
+
+1414594130 /home/charalambos/Documents/CODE/StructurePointcloud/GeometryExporter.h
+	<time.h>
+	"Face.h"
+	"Utilities.h"
+	"GeometricObject.h"
+
+1450824510 source:/home/charalambos/Documents/CODE/StructurePointcloud/GeometryProcessing.cpp
+	"GeometryProcessing.h"
+	"Color.h"
+
+1452739974 source:/home/charalambos/Documents/CODE/StructurePointcloud/GeospatialBoundingBox.cpp
+	"GeospatialBoundingBox.h"
+
+1452655789 /home/charalambos/Documents/CODE/StructurePointcloud/GeospatialBoundingBox.h
+	<float.h>
+	<iostream>
+	<fstream>
+	<Eigen/Eigen>
+	"BoundingBox.h"
+	"ImageProcessing.h"
+	"GeometryProcessing.h"
+	"Image.h"
+	"Utilities.h"
+	"Sorter.h"
+	<vector>
+
+1414583352 /home/charalambos/Documents/CODE/StructurePointcloud/ImageProcessing.h
+	"fftw3.h"
+	<cmath>
+	<algorithm>
+	<fstream>
+	<iostream>
+	<sstream>
+	"geom.h"
+	"fast_color_bf.h"
+	"linear_bf.h"
+
+1162890362 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/geom.h
+	<cmath>
+	<vector>
+	<iostream>
+
+1346684294 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/fast_color_bf.h
+	"mixed_vector.h"
+	<iostream>
+	"chrono.h"
+	"array.h"
+	"array_n.h"
+	"math_tools.h"
+
+1163360472 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/mixed_vector.h
+
+1163360464 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/chrono.h
+	<ctime>
+	<iostream>
+	<sstream>
+	<string>
+	"msg_stream.h"
+
+1417002460 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/array.h
+	<stdexcept>
+	<iostream>
+	<vector>
+	<sstream>
+	<qdom.h>
+
+1163360450 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/array_n.h
+	<stdexcept>
+	<iostream>
+	<algorithm>
+	<vector>
+	"geom.h"
+
+1162890362 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/math_tools.h
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<limits>
+	<numeric>
+	<vector>
+	<limits>
+	"array.h"
+	"array_n.h"
+	"geom.h"
+	"msg_stream.h"
+
+1335260408 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/linear_bf.h
+	<cmath>
+	"array.h"
+	"fft_3D.h"
+	"math_tools.h"
+	<iostream>
+	"chrono.h"
+
+1138723212 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/include/fft_3D.h
+	"fft_3D/convolution_3D.h"
+	"fft_3D/fill_3D.h"
+	"fft_3D/support_3D.h"
+
+1138725814 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/fft_3D/convolution_3D.h
+	<algorithm>
+	"fftw3.h"
+	"fft_3D/support_3D.h"
+
+1149505170 /home/charalambos/Documents/CODE/StructurePointcloud/bilateral_filtering/fft_3D/fill_3D.h
+
+1450825625 /home/charalambos/Documents/CODE/StructurePointcloud/Sorter.h
+	<stdio.h>
+	"Eigen/Eigen"
+	<vector>
+
+1414594742 /home/charalambos/Documents/CODE/StructurePointcloud/Monitoring.h
+	<map>
+	<string>
+
+1450925887 source:/home/charalambos/Documents/CODE/StructurePointcloud/Image.cpp
+	"Image.h"
+	"Utilities.h"
+	"GeometryProcessing.h"
+	"ImageProcessing.h"
+	"BoundingBox.h"
+	"Monitoring.h"
+
+1450832324 source:/home/charalambos/Documents/CODE/StructurePointcloud/ImageProcessing.cpp
+	"ImageProcessing.h"
+	"Image.h"
+	"Color.h"
+
+1452655074 source:/home/charalambos/Documents/CODE/StructurePointcloud/main.cpp
+	"Eigen/Eigen"
+	"BoundingBox.h"
+	"GeometryExporter.h"
+	"GeospatialBoundingBox.h"
 

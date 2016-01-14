@@ -42,11 +42,12 @@
 			<Add option="`opencv-config --cxxflags`" />
 			<Add option="-DNO_XML" />
 			<Add directory="/usr/include/ImageMagick-6" />
-			<Add directory="./bilateral_filtering" />
-			<Add directory="./bilateral_filtering/include" />
-			<Add directory="./bilateral_filtering/fft_3D" />
+			<Add directory="bilateral_filtering" />
+			<Add directory="bilateral_filtering/include" />
+			<Add directory="bilateral_filtering/fft_3D" />
 			<Add directory="/usr/include/opencv2" />
 			<Add directory="/usr/include" />
+			<Add directory="/usr/include/eigen3" />
 		</Compiler>
 		<Linker>
 			<Add library="/usr/lib64/libMagick++-6.Q16.so" />
@@ -75,7 +76,6 @@
 		<Unit filename="ImageProcessing.h" />
 		<Unit filename="Sorter.h" />
 		<Unit filename="Utilities.h" />
-		<Unit filename="Vector.h" />
 		<Unit filename="bilateral_filtering/fft_3D/convolution_3D.h" />
 		<Unit filename="bilateral_filtering/fft_3D/fill_3D.h" />
 		<Unit filename="bilateral_filtering/fft_3D/support_3D.cpp" />

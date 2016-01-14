@@ -96,6 +96,8 @@ class Image	{
 		void normalize(float _range=1.0f);
 		///Normalizes the image in a specific range
 		void normalize(Color *_range);
+		///Per pixel normalization i.e. each RGB is normalized to 1
+		void perPixelNormalization(float _range=1.0f);
 
 		///Clear the image to the given color
 		void clear(Color const &val);

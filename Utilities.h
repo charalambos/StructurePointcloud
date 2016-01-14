@@ -13,7 +13,8 @@
 #include <vector>
 #include <iterator>
 #include <algorithm>
-#include "Vector.h"
+#include "Eigen/Eigen"
+using namespace Eigen;
 #include <time.h>
 #include <sys/types.h>
 #include <sys/timeb.h>

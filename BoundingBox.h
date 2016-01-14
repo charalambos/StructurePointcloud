@@ -14,8 +14,8 @@
 
 
 #include <float.h>
-#include "Vector.h"
-
+#include "Eigen/Eigen"
+using namespace Eigen;
 
 class BoundingBox	{
 	public:

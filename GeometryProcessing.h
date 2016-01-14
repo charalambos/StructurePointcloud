@@ -16,7 +16,9 @@
 
 #include "Image.h"
 #include "Color.h"
-#include "Vector.h"
+#include <Eigen/Eigen>
+using namespace Eigen;
+
 #include "Utilities.h"
 #include "GeometricObject.h"
 

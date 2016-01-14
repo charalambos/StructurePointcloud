@@ -6,7 +6,8 @@
 #define __COLOR_H__
 
 #include <math.h>
-#include "Vector.h"
+#include <Eigen/Eigen>
+using namespace Eigen;
 
 #define COLOR_EPSILON 1e-03
 
@@ -51,24 +52,36 @@ class Color	{
 		Color &operator/= (float scalar);
 
 		///Conversion functions
-		template<class T>
-		friend Vector<T,3> color2vector3(Color const &c)	{
-			return Vector<T,3>((T) c.r(), (T) c.g(), (T) c.b());
-		}
-
-		template<typename T>
-		friend Vector<T,4> color2vector4(Color const &c)	{
-			return Vector<T,4>((T) c.r(), (T) c.g(), (T) c.b(), (T) c.a());
-		}
-
-		template<typename T>
-		friend Color vector2color3(Vector<T,3> const &v)	{
+		friend Color vector2color3(Vector3i const &v)	{
 			return Color(float(v(0)), float(v(1)), float(v(2)), 1.0f);
 		}
 
-		template<typename T>
-		friend Color vector2color4(Vector<T,4> const &v)	{
+		friend Color vector2color3(Vector3f const &v)	{
+			return Color(v(0), v(1), v(2), 1.0f);
+		}
+
+		friend Color vector2color3(Vector3d const &v)	{
+			return Color(float(v(0)), float(v(1)), float(v(2)), 1.0f);
+		}
+
+		friend Color vector2color4(Vector4i const &v)	{
 			return Color(float(v(0)), float(v(1)), float(v(2)), float(v(3)));
+		}
+
+		friend Color vector2color4(Vector4f const &v)	{
+			return Color(float(v(0)), float(v(1)), float(v(2)), float(v(3)));
+		}
+
+		friend Color vector2color4(Vector4d const &v)	{
+			return Color(float(v(0)), float(v(1)), float(v(2)), float(v(3)));
+		}
+
+		friend Vector3f color2vector3(Color const &c)	{
+			return Vector3f(c.r(), c.g(), c.b());
+		}
+
+		friend Vector4f color2vector4(Color const &c)	{
+			return Vector4f(c.r(), c.g(), c.b(), c.a());
 		}
 
 		///Print functions
@@ -88,5 +101,21 @@ class Color	{
 	private:
 		Vector4f data;
 };
+
+Color vector2color3(Vector3i const &v);
+
+Color vector2color3(Vector3f const &v);
+
+Color vector2color3(Vector3d const &v);
+
+Color vector2color4(Vector4i const &v);
+
+Color vector2color4(Vector4f const &v);
+
+Color vector2color4(Vector4d const &v);
+
+Vector3f color2vector3(Color const &c);
+
+Vector4f color2vector4(Color const &c);
 
 #endif

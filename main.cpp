@@ -3,14 +3,15 @@
 // This work can only be used under an exclusive license of the author.           //
 ////////////////////////////////////////////////////////////////////////////////////
 
-#include "Vector.h"
+#include "Eigen/Eigen"
+using namespace Eigen;
 #include "BoundingBox.h"
 #include "GeometryExporter.h"
 #include "GeospatialBoundingBox.h"
 
-#include "Monitoring.h"
 
-#define DEFAULT_RES		1024
+
+#define DEFAULT_RES		2048
 
 ///BBox centroid repositioning offset. This repositions the data to its original position
 Vector3f centroid_repos_offset;
@@ -50,7 +51,6 @@ void structure(const char *file_name);
 int createGeospatialBoundingBox(Vector3f const &centroid, Vector3f const &resolution, std::string *_file_name);
 
 void byteLength(const char *file_name)	{
-    functions_used["byteLength"] = 1;
 
 	std::cout << "Computing size of data in bytes..." << std::endl;
 
@@ -78,7 +78,6 @@ void byteLength(const char *file_name)	{
 }
 
 int createGeospatialBoundingBox(Vector3f const &centroid, Vector3f const &resolution, std::string *_file_name=0x00)	{
-	functions_used["createGeospatialBoundingBox"] = 1;
 
 	///Create a geospatial bounding box for this bbox
 	GeospatialBoundingBox *geo_bbox = new GeospatialBoundingBox(centroid,resolution,_file_name);
@@ -88,7 +87,6 @@ int createGeospatialBoundingBox(Vector3f const &centroid, Vector3f const &resolu
 }
 
 bool removeGeospatialBoundingBox(int index)	{
-    functions_used["removeGeospatialBoundingBox"] = 1;
 
 	///check for boundary conditions
 	if (index<0 || index>= geo_bboxes.size())	return false;
@@ -104,7 +102,6 @@ bool removeGeospatialBoundingBox(int index)	{
 }
 
 void createGeospatialBoundingBoxes()	{
-    functions_used["createGeospatialBoundingBoxes"] = 1;
 
 	Vector3f min_pt = bbox->getMinPt();
 	Vector3f max_pt = bbox->getMaxPt();
@@ -145,7 +142,6 @@ void createGeospatialBoundingBoxes()	{
 }
 
 void subdivideGeospatialBoundingBox(int index, int level)	{
-    functions_used["subdivideGeospatialBoundingBox"] = 1;
 
 	///subdivide the geo box into 8 geoboxes
 	for (int i=0;i<level;i++)	std::cout << "\t";
@@ -211,7 +207,6 @@ void subdivideGeospatialBoundingBox(int index, int level)	{
 
 
 void insert(Vector3f const &point, int level)	{
-    functions_used["insert"] = 1;
 
 	///go through the bboxes' centroids and check if the point lies inside any of them
 	int index=-1;
@@ -248,7 +243,6 @@ void insert(Vector3f const &point, int level)	{
 
 
 void exportStructureInformationFile()	{
-    functions_used["exportStructureInformationFile"] = 1;
 
 	FILE *file_ptr = fopen("structure_file.info","w");
 	fprintf(file_ptr, "%d\n",geo_bboxes.size());
@@ -261,7 +255,6 @@ void exportStructureInformationFile()	{
 }
 
 void sort(const char *file_name)	{
-    functions_used["sort"] = 1;
 
 	///Read the data once and distribute each point to the right cell in the kd-tree. At the same
 	///time create geospatial bounding boxes which store the points in each cell to the disk.
@@ -311,7 +304,6 @@ void sort(const char *file_name)	{
 }
 
 void computeBoundingBox(const char *file_name)	{
-    functions_used["computeBondingBox"] = 1;
 
 	///Read the data once and compute the Bounding Box (min and max points)
 	///Using the min and max points reposition the dataset around the origine ( subtract by the centroid)
@@ -390,7 +382,6 @@ void computeBoundingBox(const char *file_name)	{
 
 
 void structure(const char *file_name)	{
-    functions_used["structure"] = 1;
 
 	std::cout << _format("Starting structuring %s.", timestamp().c_str()).c_str() << std::endl;
 
@@ -465,8 +456,6 @@ int main(int argc, char *argv[])    {
     }
 
     delete ge;
-
-    printFunctionsUsed();
 
 
     return 0;

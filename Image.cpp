@@ -395,7 +395,7 @@ bool Image::loadPFM(std::string const &file_name)	{
 		goto LoadPFM_error_end;
 	}
 
-	for (y = height-1; y >=0; y--)	{
+	for (y = 0; y < height; y++)	{
 		for (x = 0; x < width; x++)	{
 			data[y][x].a() = 1.0f;
 			if (b)			// color
@@ -620,6 +620,19 @@ void Image::setPixel(int x, int y, Color const &color)	{
 			return;
 	}
 	data[y][x] = color;
+	return;
+}
+
+void Image::perPixelNormalization(float _range)	{
+    for (int y=0;y<height;y++)	{
+		for (int x=0;x<width;x++)	{
+			Vector3f val = color2vector3(getPixel(x,y));
+			val.normalize();
+
+			setPixel(x,y,Color(val(0),val(1),val(2),1.0f));
+		}
+	}
+
 	return;
 }
 
@@ -982,7 +995,6 @@ void Image::scale(float f)	{
 }
 
 float Image::getPixelGrayscale(int x, int y, int index)	{
-    functions_used["Image: getPixelGrayscale"] = 1;
 	if (index == -1 || index > 3)	{
 		Color val = getPixel(x,y);
 		return 0.2989f * val.r() + 0.5870f * val.g() + 0.1140f * val.b();
@@ -994,19 +1006,17 @@ float Image::getPixelGrayscale(int x, int y, int index)	{
 }
 
 void Image::grayscale(int index)	{
-    functions_used["Image: grayscale"] = 1;
 	for (int y=0;y<height;y++)	{
 		for (int x=0;x<width;x++)	{
 			float val = getPixelGrayscale(x,y, index);
-			data[y][x].r() = data[y][x].g() = data[y][x].b() = val;
+			data[y][x] = Color(val);
 		}
 	}
 	return;
 }
 
 Color *Image::range()	{
-    functions_used["Image: range"] = 1;
-	///Compute the max and min values for each channel
+    ///Compute the max and min values for each channel
 	Color max_val(-FLT_MAX,-FLT_MAX,-FLT_MAX);
 	Color min_val(FLT_MAX,FLT_MAX,FLT_MAX);
 
@@ -1105,7 +1115,6 @@ Image *Image::negate()	{
 }
 
 void Image::RGBtoXYZ()	{
-    functions_used["Image: RGBtoXYZ"] = 1;
 	for (int y=0;y<height;y++)	{
 		for (int x=0;x<width;x++)	{
 			float r = getPixel(x,y).r();
@@ -1137,15 +1146,14 @@ void Image::RGBtoXYZ()	{
 }
 
 void Image::RGBtoLUV()	{
-    functions_used["Image: RGBtoLUV"] = 1;
-	///convert first to XYZ
+    ///convert first to XYZ
 	RGBtoXYZ();
 
 	///CIE chromaticity coordinates:
-	float xn = 0.312713;
-	float yn = 0.329016;
+	float xn = 0.312713f;
+	float yn = 0.329016f;
 	///CIE luminance:
-	float Yn = 1.0;
+	float Yn = 1.0f;
 	for (int y=0;y<height;y++)	{
 		for (int x=0;x<width;x++)	{
 			float X = getPixel(x,y).r();
@@ -1154,15 +1162,26 @@ void Image::RGBtoLUV()	{
 
 			float un = 4.0f*xn / (-2.0f*xn + 12.0f*yn + 3.0f);
 			float vn = 9.0f*yn / (-2.0f*xn + 12.0f*yn + 3.0f);
-			float u = 4.0f*X / (X + 15.0f*Y + 3.0f*Z);
-			float v = 9.0f*Y / (X + 15.0f*Y + 3.0f*Z);
+			float denom = (X + 15.0f*Y + 3.0f*Z);
+			if (denom < EPSILON)    denom = 1.0f;
+			float u = 4.0f*X / denom;
+			float v = 9.0f*Y / denom;
 			float L = 116.0f * pow((Y/Yn),(1.0f/3.0f)) - 16.0f;
 			float U = 13.0f*L*(u-un);
 			float V = 13.0f*L*(v-vn);
 
+if (isnan(X) || isnan(Y) || isnan(Z) || isnan(L) || isnan(U) || isnan(V))  {
+    std::cout << X << " " << Y << " " << Z << " " << L << " " << U << " " << V << std::endl;
+    std::cout << x << " " << y << std::endl;
+    exit(0);
+}
 			setPixel(x,y,Color(L,U,V));
 		}
 	}
+
+    ///Computed L component values are in the range [0 to 100].
+    ///Computed U component values are in the range [-124 to 220].
+    ///Computed V component values are in the range [-140 to 116].
 
 	return;
 }

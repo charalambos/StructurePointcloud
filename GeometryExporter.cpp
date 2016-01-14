@@ -8,10 +8,7 @@
 
 #include "GeometryExporter.h"
 
-#include "Monitoring.h"
-
 void GeometryExporter::exportToOBJ(const char *file_name, GeometricObject *object)	{
-    functions_used["GeometryExporter: exportToOBJ"] = 1;
 
 	FILE *file_ptr = fopen(_format("%s.obj",file_name).c_str(),"w");
 	if (!file_ptr) return;

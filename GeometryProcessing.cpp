@@ -6,11 +6,9 @@
 #define __GEOMETRY_PROCESSING_CPP__
 
 #include "GeometryProcessing.h"
-
-#include "Monitoring.h"
+#include "Color.h"
 
 GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_map)	{
-    functions_used["GeometryProcesing: triangulate"] = 1;
 
 	if (!xyz_map)	{
 		return 0x00;
@@ -67,9 +65,9 @@ GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_
 			int index1,index2,index3,index4;
 			//add the points
 			if (already_added->getPixel(x,y) == Color(-1.0f,-1.0f,-1.0f))	{
-				Vector3f point1 = color2vector3<float>(xyz_map->getPixel(x,y));
+				Vector3f point1 = color2vector3(xyz_map->getPixel(x,y));
 				new_vertices.push_back(point1);
-				Vector3f normal1 = color2vector3<float>(normal_map->getPixel(x,y));
+				Vector3f normal1 = color2vector3(normal_map->getPixel(x,y));
 				normals.push_back(normal1);
 				index1 = vertex_count;
 				already_added->setPixel(x,y,Color(float(vertex_count)));
@@ -79,9 +77,9 @@ GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_
 				index1 = int(already_added->getPixel(x,y).r());
 			}
 			if (already_added->getPixel(x+offset_x,y) == Color(-1.0f,-1.0f,-1.0f))	{
-				Vector3f point2 = color2vector3<float>(xyz_map->getPixel(x+offset_x,y));
+				Vector3f point2 = color2vector3(xyz_map->getPixel(x+offset_x,y));
 				new_vertices.push_back(point2);
-				Vector3f normal2 = color2vector3<float>(normal_map->getPixel(x+offset_x,y));
+				Vector3f normal2 = color2vector3(normal_map->getPixel(x+offset_x,y));
 				normals.push_back(normal2);
 				index2 = vertex_count;
 				already_added->setPixel(x+offset_x,y,Color(float(vertex_count)));
@@ -91,9 +89,9 @@ GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_
 				index2 = int(already_added->getPixel(x+offset_x,y).r());
 			}
 			if (already_added->getPixel(x,y+offset_y)==Color(-1.0f,-1.0f,-1.0f))	{
-				Vector3f point3 = color2vector3<float>(xyz_map->getPixel(x,y+offset_y));
+				Vector3f point3 = color2vector3(xyz_map->getPixel(x,y+offset_y));
 				new_vertices.push_back(point3);
-				Vector3f normal3 = color2vector3<float>(normal_map->getPixel(x,y+offset_y));
+				Vector3f normal3 = color2vector3(normal_map->getPixel(x,y+offset_y));
 				normals.push_back(normal3);
 				index3 = vertex_count;
 				already_added->setPixel(x,y+offset_y, Color(float(vertex_count)));
@@ -103,9 +101,9 @@ GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_
 				index3 = int(already_added->getPixel(x,y+offset_y).r());
 			}
 			if (already_added->getPixel(x+offset_x, y+offset_y) == Color(-1.0f,-1.0f,-1.0f))	{
-				Vector3f point4 = color2vector3<float>(xyz_map->getPixel(x+offset_x, y+offset_y));
+				Vector3f point4 = color2vector3(xyz_map->getPixel(x+offset_x, y+offset_y));
 				new_vertices.push_back(point4);
-				Vector3f normal4 = color2vector3<float>(normal_map->getPixel(x+offset_x,y+offset_y));
+				Vector3f normal4 = color2vector3(normal_map->getPixel(x+offset_x,y+offset_y));
 				normals.push_back(normal4);
 				index4 = vertex_count;
 				already_added->setPixel(x+offset_x,y+offset_y,Color(float(vertex_count)));
@@ -149,24 +147,19 @@ GeometricObject *GeometryProcessing::triangulate(Image *xyz_map, Image *_normal_
  	return new_object;
 }
 
-Image *GeometryProcessing::computeNormalMap(Image *map, bool z_up)      {
-        functions_used["GeometryProcesing: computeNormalMap"] = 1;
-
-
-        Image *normal_map = new Image(map->getWidth(),map->getHeight(),0.0f,0.0f,0.0f,1.0f);
-        for (int y=0;y<map->getHeight();y++) {
-                for (int x=0;x<map->getWidth();x++) {
-                		if (map->getPixel(x,y) != Color(0.0f,0.0f,0.0f))	{
-                			normal_map->setPixel(x,y, vector2color3<float>(computeLocalNormal(map,Vector2i(x,y),z_up)));
+Image *GeometryProcessing::computeNormalMap(Image *xyz_map, bool z_up)      {
+         Image *normal_map = new Image(xyz_map->getWidth(),xyz_map->getHeight(),0.0f,0.0f,0.0f,1.0f);
+        for (int y=0;y<xyz_map->getHeight();y++) {
+                for (int x=0;x<xyz_map->getWidth();x++) {
+                		if (xyz_map->getPixel(x,y) != Color(0.0f,0.0f,0.0f))	{
+                			normal_map->setPixel(x,y,vector2color3(computeLocalNormal(xyz_map,Vector2i(x,y),z_up)));
                 		}
                 }
         }
         return normal_map;
 }
 
-Vector3f GeometryProcessing::computeLocalNormal(Image *map, Vector2i const &index, bool z_up)        {
-        functions_used["GeometryProcesing: computeLocalNormal"] = 1;
-
+Vector3f GeometryProcessing::computeLocalNormal(Image *xyz_map, Vector2i const &index, bool z_up)        {
 
         //get an average normal for this point
         //check the  8 neighbours of the pixel in counter clockwise order
@@ -183,20 +176,21 @@ Vector3f GeometryProcessing::computeLocalNormal(Image *map, Vector2i const &inde
 
 		std::vector<Vector3f> good_points;
 		for (int i=0;i<indices.size();i++)	{
-			if (outOfBounds(map, indices[i](0),indices[i](1)))	continue;
-			if (map->getPixel(indices[i](0), indices[i](1)) == Color(0.0f,0.0f,0.0f))	continue;
-			good_points.push_back(color2vector3<float>(map->getPixel(indices[i](0),indices[i](1))));
+			if (outOfBounds(xyz_map, indices[i](0),indices[i](1)))	continue;
+			if (xyz_map->getPixel(indices[i](0), indices[i](1)) == Color(0.0f,0.0f,0.0f))	continue;
+			good_points.push_back(color2vector3(xyz_map->getPixel(indices[i](0),indices[i](1))));
 		}
 
 		std::vector<Vector3f> diff_vectors;
 		for (int i=0;i<good_points.size();i++)	{
-			diff_vectors.push_back(good_points[i] - color2vector3<float>(map->getPixel(index(0),index(1))));
+			diff_vectors.push_back(good_points[i] - color2vector3(xyz_map->getPixel(index(0),index(1))));
 		}
 
 		Vector3f normal = Vector3f(0.0f,0.0f,0.0f);
 		for (int i=0;i<diff_vectors.size();i++)	{
 			int next = (i+1)%diff_vectors.size();
-			Vector3f current_normal = UnitVector(cross(diff_vectors[i], diff_vectors[next]));
+			Vector3f current_normal = diff_vectors[i].cross(diff_vectors[next]);
+			if (current_normal.norm() > EPSILON)    current_normal.normalize();
 	        ///THIS IS ADDED FOR AERIAL LIDAR DATA ONLY. THE Z SHOULD POINT UP
 			if (z_up && current_normal(2) < 0.0f) {
 				current_normal = -current_normal;
@@ -205,7 +199,9 @@ Vector3f GeometryProcessing::computeLocalNormal(Image *map, Vector2i const &inde
 		}
 
         normal /= float(std::max(1,int(diff_vectors.size())));
-        normal.Normalize();
+        if (normal.norm() > EPSILON)    {
+            normal.normalize();
+        }
 
 	return normal;
 }

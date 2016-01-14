@@ -11,20 +11,17 @@
 #include "GeometricObject.h"
 #include "GeometryProcessing.h"
 
-#include "Monitoring.h"
-
 GeometricObject::GeometricObject(std::vector<Vector3f> const &_vertices,
 				 std::vector<Vector3f> const &_normals,
 				 std::vector<Vector2f> const &_tex_coords,
 				 std::vector<Face *> const &_faces,
 				 std::vector<Edge *> const &_edges):
 				 vertices(_vertices),normals(_normals),texture_coords(_tex_coords),faces(_faces),edges(_edges)	{
-    functions_used["GeometricObject: GeometricObject"] = 1;
+
 }
 
 
 GeometricObject::~GeometricObject()	{
-    functions_used["GeometricObject: ~GeometricObject"] = 1;
 
 	vertices.clear();
 	normals.clear();
@@ -42,13 +39,11 @@ GeometricObject::~GeometricObject()	{
 }
 
 std::vector<Vector3f> GeometricObject::getVertices() const	{
-    functions_used["GeometricObject: getVertices"] = 1;
 
 	return vertices;
 }
 
 Vector3f GeometricObject::getVertexAt(int index) const	{
-    functions_used["GeometricObject: getVertexAt"] = 1;
 
 	if (index>=0 && index<vertices.size())	{
 		return vertices[index];
@@ -60,13 +55,11 @@ Vector3f GeometricObject::getVertexAt(int index) const	{
 }
 
 std::vector<Vector3f> GeometricObject::getNormals() const	{
-    functions_used["GeometricObject: getNormals"] = 1;
 
 	return normals;
 }
 
 Vector3f GeometricObject::getNormalAt(int index) const	{
-    functions_used["GeometricObject: getNormalAt"] = 1;
 
 	if (index>=0 && index<normals.size())	{
 		return normals[index];
@@ -75,13 +68,11 @@ Vector3f GeometricObject::getNormalAt(int index) const	{
 }
 
 std::vector<Vector2f> GeometricObject::getTextureCoords() const	{
-    functions_used["GeometricObject: getTextureCoords"] = 1;
 
 	return texture_coords;
 }
 
 Vector2f GeometricObject::getTextureCoordAt(int index) const	{
-    functions_used["GeometricObject: getTextureCoordAt"] = 1;
 
 	if (index>=0 && index<texture_coords.size())	{
 		return texture_coords[index];
@@ -90,13 +81,11 @@ Vector2f GeometricObject::getTextureCoordAt(int index) const	{
 }
 
 std::vector<Face *> GeometricObject::getFaces() const	{
-    functions_used["GeometricObject: getFaces"] = 1;
 
 	return faces;
 }
 
 Face *GeometricObject::getFaceAt(int index) const	{
-    functions_used["GeometricObject: getFaceAt"] = 1;
 
 	if (index>=0 && index<faces.size())	{
 		return faces[index];
@@ -105,13 +94,11 @@ Face *GeometricObject::getFaceAt(int index) const	{
 }
 
 std::vector<Edge *> GeometricObject::getEdges() const	{
-    functions_used["GeometricObject: getEdges"] = 1;
 
 	return edges;
 }
 
 Edge *GeometricObject::getEdgeAt(int index) const	{
-    functions_used["GeometricObject: getEdgeAt"] = 1;
 
 	if (index>=0 && index<edges.size())	{
 		return edges[index];

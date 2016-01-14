@@ -7,8 +7,6 @@
 
 #include "Color.h"
 
-#include "Monitoring.h"
-
 Color::Color() {
 	data(0) = 0.0f;
 	data(1) = 0.0f;

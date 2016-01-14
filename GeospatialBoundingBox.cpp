@@ -8,8 +8,6 @@
 
 #include "GeospatialBoundingBox.h"
 
-#include "Monitoring.h"
-
 #define DEBUG	1
 
 int GeospatialBoundingBox::global_id = 0;
@@ -23,7 +21,6 @@ GeospatialBoundingBox::GeospatialBoundingBox()	{
 }
 
 GeospatialBoundingBox::GeospatialBoundingBox(int index, std::string *base_file_name)	{
-    functions_used["GeospatialBoundingBox: GeospatialBoundingBox"] = 1;
 
 	normal_map = 0x00;
 	xyz_map = 0x00;
@@ -34,7 +31,6 @@ GeospatialBoundingBox::GeospatialBoundingBox(int index, std::string *base_file_n
 }
 
 GeospatialBoundingBox::GeospatialBoundingBox(Vector3f const &_centroid, Vector3f const &_resolution, std::string *_file_name)	{
-    functions_used["GeospatialBoundingBox: GeospatialBoundingBox"] = 1;
 
 	resolution = _resolution;
 
@@ -64,7 +60,6 @@ GeospatialBoundingBox::GeospatialBoundingBox(Vector3f const &_centroid, Vector3f
 }
 
 GeospatialBoundingBox::~GeospatialBoundingBox()	{
-    functions_used["GeospatialBoundingBox: ~GeospatialBoundingBox"] = 1;
 	if (output_file.is_open())	output_file.close();
 	if (xyz_map)	delete xyz_map;
 	if (normal_map)	delete normal_map;
@@ -72,12 +67,10 @@ GeospatialBoundingBox::~GeospatialBoundingBox()	{
 }
 
 int GeospatialBoundingBox::getNumberOfPoints()	const	{
-    functions_used["GeospatialBoundingBox: getNumberOfPoints"] = 1;
 	return number_of_points;
 }
 
 std::vector<Vector3f> GeospatialBoundingBox::getPoints(bool offset) const	{
-    functions_used["GeospatialBoundingBox: getPoints"] = 1;
 
 	std::string line;
 	std::vector<Vector3f> points;
@@ -120,12 +113,10 @@ std::vector<Vector3f> GeospatialBoundingBox::getPoints(bool offset) const	{
 }
 
 Vector3f GeospatialBoundingBox::getCentroid() const	{
-    functions_used["GeospatialBoundingBox: getCentroid"] = 1;
 	return centroid;
 }
 
 void GeospatialBoundingBox::insert(Vector3f const &point)	{
-    functions_used["GeospatialBoundingBox: insert"] = 1;
 
 	///write it out to the file
 	output_file << point(0) << " " << point(1) << " " << point(2) << endl;
@@ -142,7 +133,6 @@ void GeospatialBoundingBox::insert(Vector3f const &point)	{
 }
 
 void GeospatialBoundingBox::initialize(Image *resampled)	{
-    functions_used["GeospatialBoundingBox: initialize"] = 1;
 
 	if (!resampled)	{
 
@@ -153,7 +143,7 @@ void GeospatialBoundingBox::initialize(Image *resampled)	{
 		std::vector<Vector3f> points = getPoints(true);
 
 		///Resample the data into an XYZ map
-		if (!resample(EPSILON))	{
+		if (!resample())	{
 			return;
 		}
 		exportXYZMap("A");
@@ -165,7 +155,7 @@ void GeospatialBoundingBox::initialize(Image *resampled)	{
 		exportXYZMap("B");
 
 		///Perform point reduction by removing extra points added by the hole filling
-		ImageProcessing::pointReduction(non_hole_filled_map, xyz_map, 100);
+		ImageProcessing::pointReduction(non_hole_filled_map, xyz_map, 10);
 		exportXYZMap("C");
 		delete non_hole_filled_map;
 
@@ -178,7 +168,7 @@ void GeospatialBoundingBox::initialize(Image *resampled)	{
 		///Normalize the zzz_map
 		zzz_map->normalize();
 
-		Image *filtered_image = ImageProcessing::bilateralFilteringGrayscale(zzz_map,1.0,1.0,0.025,0.025);
+		Image *filtered_image = ImageProcessing::bilateralFilteringGrayscale(zzz_map,1.0,1.0,0.025,0.025);//0.25,0.25,0.025,0.025);
 		Color *min_max_val = xyz_map->range();
 		for (int y=0;y<xyz_map->getHeight();y++)	{
 			for (int x=0;x<xyz_map->getWidth();x++)	{
@@ -199,41 +189,42 @@ void GeospatialBoundingBox::initialize(Image *resampled)	{
 	}
 	else	{
 		xyz_map = resampled;
+		///Add the points to the geo box
+		for (int y=0;y<xyz_map->getHeight();y++)    {
+            for (int x=0;x<xyz_map->getWidth();x++) {
+                Vector3f pt = color2vector3(xyz_map->getPixel(x,y));
+                if (pt == Vector3f(0.0f,0.0f,0.0f))    continue;
+                insert(pt);
+            }
+		}
 	}
 
 	///Compute a normal map based on the XYZ map of the geo_box
 	if (normal_map)	delete normal_map;
 	normal_map = GeometryProcessing::computeNormalMap(xyz_map, true);
 	normal_map->blur(1);
+	normal_map->perPixelNormalization();
 	normal_map->saveImage(_format("%s_normal_map.pfm", file_name.c_str()));
 
 	///Compute the height variation between the points
-	//This is not used during the structure but later on for the clustering part
-	//computeHeightAndNormalVariation();
-
-	///Triangulate the points using the xyz map
-    //object = GeometryProcessing::triangulate(xyz_map);
+	computeHeightAndNormalVariation();
 
 	return;
 }
 
 bool GeospatialBoundingBox::maxedOut()	{
-    functions_used["GeospatialBoundingBox: maxedOut"] = 1;
 	return (number_of_points >= MAX_CAPACITY);
 }
 
 Vector3f GeospatialBoundingBox::getResolution()	{
-    functions_used["GeospatialBoundingBox: getResolution"] = 1;
 	return resolution;
 }
 
 std::string GeospatialBoundingBox::getFileName()	{
-    functions_used["GeospatialBoundingBox: getFileName"] = 1;
 	return file_name;
 }
 
 void GeospatialBoundingBox::setFileName(std::string const &_file_name)	{
-    functions_used["GeospatialBoundingBox: setFileName"] = 1;
 	///Close the existing file
 	output_file.close();
 	///Erase it from disk
@@ -250,14 +241,12 @@ void GeospatialBoundingBox::setFileName(std::string const &_file_name)	{
 }
 
 bool GeospatialBoundingBox::liesInside(Vector3f const &point)	{
-    functions_used["GeospatialBoundingBox: liesInside"] = 1;
 	return ( (point(0) + EPSILON >= min_pt(0)) && (point(0) <= max_pt(0) + EPSILON) &&
 		 (point(1) + EPSILON >= min_pt(1)) && (point(1) <= max_pt(1) + EPSILON) &&
 		 (point(2) + EPSILON >= min_pt(2)) && (point(2) <= max_pt(2) + EPSILON) );
 }
 
 void GeospatialBoundingBox::exportXYZMap(std::string const &post_script)	{
-    functions_used["GeospatialBoundingBox: exportXYZMap"] = 1;
 
 	if (post_script == "")	{
 		xyz_map->saveImage(_format("%s.pfm",file_name.c_str()));
@@ -272,23 +261,18 @@ void GeospatialBoundingBox::exportXYZMap(std::string const &post_script)	{
 }
 
 Image *GeospatialBoundingBox::getXYZMap()	{
-	functions_used["GeospatialBoundingBox: getXYZMap"] = 1;
 	return xyz_map;
 }
 
 Image *GeospatialBoundingBox::getNormalMap()	{
-    functions_used["GeospatialBoundingBox: getNormalMap"] = 1;
 	return normal_map;
 }
 
 Image *GeospatialBoundingBox::getHeightAndNormalVariationMap()	{
-    functions_used["GeospatialBoundingBox: getHeightAndNormalVariationMap"] = 1;
 	return height_and_normal_variation_map;
 }
 
 GeometricObject *GeospatialBoundingBox::getObject()	{
-
-    functions_used["GeospatialBoundingBox: getObject"] = 1;
 
     std::string start_time = timestamp();
     GeometricObject *new_object = GeometryProcessing::triangulate(xyz_map, normal_map);
@@ -301,17 +285,14 @@ GeometricObject *GeospatialBoundingBox::getObject()	{
 }
 
 Vector3f GeospatialBoundingBox::getPoint(Vector2i const &point_index)	{
-    functions_used["GeospatialBoundingBox: getPoint"] = 1;
-	return color2vector3<float>(xyz_map->getPixel(point_index(0),point_index(1)));
+	return color2vector3(xyz_map->getPixel(point_index(0),point_index(1)));
 }
 
 float GeospatialBoundingBox::getMinHeight()	{
-    functions_used["GeospatialBoundingBox: getMinHeight"] = 1;
 	return min_height;
 }
 
 void GeospatialBoundingBox::cleanUp()	{
-    functions_used["GeospatialBoundingBox: cleanUp"] = 1;
 
 	if (xyz_map)	delete xyz_map;
 	if (normal_map)	delete normal_map;
@@ -321,7 +302,6 @@ void GeospatialBoundingBox::cleanUp()	{
 }
 
 bool GeospatialBoundingBox::resample(double sampling_tolerance, double step)	{
-    functions_used["GeospatialBoundingBox: resample"] = 1;
 
 	std::cout << _format("Re-sampling process initiated.").c_str() << std::endl;
 
@@ -338,9 +318,9 @@ bool GeospatialBoundingBox::resample(double sampling_tolerance, double step)	{
 	std::cout << _format("Vertices sorted based on x:%d, vertices sorted based on y:%d",sorted_vertices_based_x.size(),sorted_vertices_based_y.size()).c_str() << std::endl;
 
     ///sort based on the x component
-	SorterComplexType3vf::quicksort(sorted_vertices_based_x,0,sorted_vertices_based_x.size()-1,0);
+	SorterComplexType::quicksort(sorted_vertices_based_x,0,sorted_vertices_based_x.size()-1,0);
     ///sort based on the y component
-	SorterComplexType3vf::quicksort(sorted_vertices_based_y,0,sorted_vertices_based_y.size()-1,1);
+	SorterComplexType::quicksort(sorted_vertices_based_y,0,sorted_vertices_based_y.size()-1,1);
 
 
     //go through the sorted arrays and count only unique number of x and y
@@ -441,9 +421,8 @@ bool GeospatialBoundingBox::resample(double sampling_tolerance, double step)	{
 }
 
 void GeospatialBoundingBox::computeHeightAndNormalVariation()	{
-    functions_used["GeospatialBoundingBox: computeHeightAndNormalVariation"] = 1;
 
-	int neighbourhood_size = 11;
+	int neighbourhood_size = 3;
 	int neighbourhood_search_size = neighbourhood_size/2;
 	///Create a map the same size as the xyz map
 	if (height_and_normal_variation_map)	delete height_and_normal_variation_map;
@@ -454,14 +433,17 @@ void GeospatialBoundingBox::computeHeightAndNormalVariation()	{
 		for (int x=0;x<xyz_map->getWidth();x++)	{
 			///Check only the valid points
 			if ((xyz_map->getPixel(x,y) == Color(0.0f,0.0f,0.0f)) || (normal_map->getPixel(x,y) == Color(0.0f,0.0f,0.0f))) continue;
-			float min_height = xyz_map->getPixel(x,y)(2);
-			float max_height = xyz_map->getPixel(x,y)(2);
+            ///Get the height of the point in question
+			float current_height = xyz_map->getPixel(x,y).b();
+
+			float min_height = xyz_map->getPixel(x,y).b();
+			float max_height = xyz_map->getPixel(x,y).b();
 
 			float min_dot = 1.0f;
 			float max_dot = 0.0f;
 
 			///Get the normal of the point in question
-			Vector3f normal = color2vector3<float>(normal_map->getPixel(x,y));
+			Vector3f normal = color2vector3(normal_map->getPixel(x,y));
 
 			///Search in a neighbourhood
 			for (int i=y-neighbourhood_search_size;i<=y+neighbourhood_search_size;i++){
@@ -478,7 +460,7 @@ void GeospatialBoundingBox::computeHeightAndNormalVariation()	{
 					if (max_height < xyz_map->getPixel(j,i)(2))	max_height = xyz_map->getPixel(j,i)(2);
 
 					///Check if max or min for the dot product
-					float dot_product = 1.0f - fabs(dot(normal, color2vector3<float>(normal_map->getPixel(j,i))));
+					float dot_product = std::max(0.0f,1.0f - fabs(normal.dot(color2vector3(normal_map->getPixel(j,i)))));
 
 					if (min_dot > dot_product)	min_dot = dot_product;
 					if (max_dot < dot_product)	max_dot = dot_product;
@@ -486,7 +468,9 @@ void GeospatialBoundingBox::computeHeightAndNormalVariation()	{
 			}
 
 			///Compute the height variation
-			float height_var = max_height - min_height;
+			float max_minus_min = max_height - min_height;
+			if (max_minus_min < EPSILON)    max_minus_min = 1.0f;
+			float height_var = (current_height-min_height)/max_minus_min;
 			///Compute the normal variation
 			float normal_var = max_dot - min_dot;
 			///Store it in the variation map
@@ -494,59 +478,13 @@ void GeospatialBoundingBox::computeHeightAndNormalVariation()	{
 		}
 	}
 
-
-	///Go through the map again and compute the second derivative of differences
-	for (int y=0;y<height_and_normal_variation_map->getHeight();y++)	{
-		for (int x=0;x<height_and_normal_variation_map->getWidth();x++)	{
-			///Check only the valid points
-			if (height_and_normal_variation_map->getPixel(x,y).r() == 0.0f &&
-				height_and_normal_variation_map->getPixel(x,y).g() == 0.0f)	continue;
-
-			///Search in a neighbourhood
-			float sum_of_differences_height = 0.0f;
-			float sum_of_differences_normal= 0.0f;
-			float neighbours = 0.0f;
-			for (int i=y-neighbourhood_search_size;i<=y+neighbourhood_search_size;i++){
-				for (int j=x-neighbourhood_search_size;j<=x+neighbourhood_search_size;j++)	{
-					///If it's the same continue
-					if (i==y && j==x)	continue;
-					///Check for out of bounds
-					if (outOfBounds(height_and_normal_variation_map, j, i))	continue;
-					///if its a valid point
-					///Check only the valid points
-					if (height_and_normal_variation_map->getPixel(j,i).r() == 0.0f &&
-						height_and_normal_variation_map->getPixel(j,i).g() == 0.0f)	continue;
-					sum_of_differences_height += fabs(height_and_normal_variation_map->getPixel(x,y).r()-height_and_normal_variation_map->getPixel(j,i).r());
-					sum_of_differences_normal+= fabs(height_and_normal_variation_map->getPixel(x,y).g()-height_and_normal_variation_map->getPixel(j,i).g());
-					neighbours++;
-				}
-			}
-			sum_of_differences_height /= max(1.0f,neighbours);
-			sum_of_differences_normal /= max(1.0f,neighbours);
-
-			Color val = height_and_normal_variation_map->getPixel(x,y);
-			height_and_normal_variation_map->setPixel(x,y,Color(val.r(), val.g(), sum_of_differences_height, sum_of_differences_normal));
-		}
-	}
-
 	if (DEBUG)	{
-		Image *secondary_image = new Image(height_and_normal_variation_map->getWidth(), height_and_normal_variation_map->getHeight(), 0.0f,0.0f,0.0f,1.0f);
-		for (int y=0;y<height_and_normal_variation_map->getHeight();y++)	{
-			for (int x=0;x<height_and_normal_variation_map->getWidth();x++)	{
-				if (height_and_normal_variation_map->getPixel(x,y).r() == 0.0f &&
-					height_and_normal_variation_map->getPixel(x,y).g() == 0.0f)	continue;
-				secondary_image->setPixel(x,y, Color(height_and_normal_variation_map->getPixel(x,y).b(), height_and_normal_variation_map->getPixel(x,y).a(),1.0f));
-			}
-		}
 		height_and_normal_variation_map->saveImage(_format("%s_height_and_dot_variation_map_A.pfm", file_name.c_str()));
-		secondary_image->saveImage(_format("%s_height_and_dot_variation_map_B.pfm", file_name.c_str()));
-		delete secondary_image;
 	}
 	return;
 }
 
 void GeospatialBoundingBox::load(int index, std::string *base_file_name)	{
-    functions_used["GeospatialBoundingBox: load"] = 1;
 
 	if (base_file_name)	{
 		file_name = (*base_file_name);
@@ -566,7 +504,6 @@ void GeospatialBoundingBox::load(int index, std::string *base_file_name)	{
 }
 
 void GeospatialBoundingBox::exportInformationFile()	{
-    functions_used["GeospatialBoundingBox: exportInformationFile"] = 1;
 
 	FILE *file_ptr = fopen(_format("%s.info",file_name.c_str()).c_str(), "w");
 	fprintf(file_ptr, "centroid: %f %f %f\n", centroid(0), centroid(1), centroid(2));
