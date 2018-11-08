@@ -50,7 +50,7 @@ GeospatialBoundingBox::GeospatialBoundingBox(Vector3f const &_centroid, Vector3f
 		file_name = (*_file_name);
 	}
 	else	{
-		file_name = _format("geo_bbox_%d.xyz",global_id++);
+		file_name = _format("../output/geo_bbox_%d.xyz",global_id++);
 	}
 	output_file.open(file_name.c_str());
 
