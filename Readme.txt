@@ -18,7 +18,7 @@ Technical details:
 - It requires the libraries Image Magick and fftw3.
 - A small sample file is provided in the data folder.
 
-*IMPORTANT: To use this software, YOU MUST CITE the following in any resulting publication:*
+*IMPORTANT: To use this software, please consider citing the following in any resulting publication:*
 
 @article{poullis2013framework,
   title={A Framework for Automatic Modeling from Point Cloud Data},
